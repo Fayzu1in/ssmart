@@ -2,6 +2,7 @@
 section
   TheHero
   DeviceCard 
+  TheProduction
 </template>
 
 <script>

@@ -17,6 +17,8 @@ export default {}
 .heroSection {
   background: rgb(83, 83, 83);
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
   .hero {
     color: #fff;
     display: flex;
@@ -25,8 +27,11 @@ export default {}
     padding-bottom: 100px;
     &__left {
       &-top {
+        padding-top: 50px;
+        padding-bottom: 150px;
         img {
-          height: 300px;
+          // height: 300px;
+          width: 250px;
         }
       }
       &-bottom {

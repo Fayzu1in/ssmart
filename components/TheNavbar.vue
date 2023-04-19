@@ -16,12 +16,12 @@ export default {}
 </script>
 <style lang="scss">
 .navbar {
-  background: grey;
+  background: #ee1f56;
   color: #fff;
   font-size: 20px;
   padding: 15px 0;
   .navbarContainer {
-    max-width: 1200px;
+    max-width: 1050px;
     width: 100%;
     margin: 0 auto;
     display: flex;
