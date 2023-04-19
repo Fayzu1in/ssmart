@@ -18,7 +18,7 @@ html {
   background: grey;
 }
 .container-fluid {
-  max-width: 1200px;
+  max-width: 1050px;
   width: 100%;
   margin: 0 auto;
 }
