@@ -11,3 +11,10 @@ def index(request):
 class ProductList(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
+
+
+
+class PartnersList(generics.ListAPIView):
+    queryset = Partners.objects.all()
+    serializer_class = PartnersSerializer

@@ -13,3 +13,16 @@ class ProductSerializer(serializers.ModelSerializer):
             'status', 
             'price'
             )
+        
+
+
+
+class PartnersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Partners
+        fields = (
+            'id', 
+            'name', 
+            'image', 
+            'info'
+            )
