@@ -13,3 +13,8 @@ class ProductAdmin(admin.ModelAdmin):
 class PartnersAdmin(admin.ModelAdmin):
     list_display = ('name', 'created', 'updated')
 
+
+
+@admin.register(Adverts)
+class AdvertsAdmin(admin.ModelAdmin):
+    list_display = ('name', 'created', 'updated')

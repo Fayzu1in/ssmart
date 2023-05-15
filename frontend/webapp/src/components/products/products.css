@@ -1,0 +1,139 @@
+.products {
+	margin: 30px 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+.products__image {
+	width: 80vw;
+	margin-top: 80px;
+	border-radius: 30px;
+}
+
+.products__image-center {
+	width: 80vw;
+	margin-top: 70px;
+	border-radius: 30px;
+}
+
+.products__heading {
+	font-size: 58px;
+	color: #fff;
+	text-align: center;
+	font-weight: 400;
+	margin: 50px 0 60px 0;
+}
+
+.products__container {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.products__container-main {
+	position: relative;
+	width: 675px;
+	height: 775px;
+	background: #5e5e5e;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 25px;
+	padding: 30px;
+}
+
+.container-main-title {
+	font-size: 42px;
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin-top: 50px;
+}
+
+.products__main-picture {
+	position: absolute;
+	width: 600px;
+	height: 810px;
+	top: -38px;
+}
+
+.container-main-bottom {
+	position: absolute;
+	bottom: 35px;
+	display: flex;
+	gap: 70px;
+	align-items: center;
+}
+
+.main-bottom-price {
+	font-size: 38px;
+	color: #fff;
+	font-weight: 300;
+}
+
+.btn-primary {
+	/* width: 180px; */
+	padding: 10px 40px;
+	/* height: 70px; */
+	border-radius: 20px;
+	background: #c23175;
+	border: none;
+	font-size: 32px;
+	font-weight: 300;
+	color: #fff;
+	cursor: pointer;
+}
+
+.vitrina__right-top.product {
+	position: relative;
+	overflow: hidden;
+	max-width: 730px;
+	min-width: 550px;
+	width: 730px;
+	height: 450px;
+	border-radius: 25px;
+	background: #5e5e5e;
+	padding: 30px;
+}
+
+.right-top-text.product {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	color: #fff;
+	margin-top: 110px;
+}
+
+.right-top-title.product {
+	font-size: 52px;
+}
+
+.right-top-description.product {
+	font-size: 32px;
+	line-height: 34px;
+}
+
+.products__image-right {
+	width: 730px;
+	border-radius: 30px;
+}
+
+.products__container-left {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.characteristics {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 26px;
+	color: #fff;
+	font-weight: 300;
+	margin: 30px;
+	margin-top: 30px;
+}

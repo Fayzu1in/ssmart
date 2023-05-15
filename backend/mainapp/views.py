@@ -9,7 +9,7 @@ def index(request):
 
 
 class ProductList(generics.ListAPIView):
-    permissions_classes = [permissions.IsAuthenticated]
+    # permissions_classes = [permissions.IsAuthenticated]
 
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -18,7 +18,15 @@ class ProductList(generics.ListAPIView):
 
 
 class PartnersList(generics.ListAPIView):
-    permissions = [permissions.IsAuthenticated]
+    # permissions = [permissions.IsAuthenticated]
 
     queryset = Partners.objects.all()
     serializer_class = PartnersSerializer
+
+
+
+class AdvertsList(generics.ListAPIView):
+    # permissions = [permissions.IsAuthenticated]
+
+    queryset = Adverts.objects.all()
+    serializer_class = AdvertsSerializer

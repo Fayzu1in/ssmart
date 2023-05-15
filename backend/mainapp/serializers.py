@@ -8,8 +8,12 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = (
             'id', 
             'name', 
-            'image', 
-            'characteristics', 
+            'image1',
+            'image2',
+            'character', 
+            'descripton',
+            'os',
+            'os_info',
             'status', 
             'price'
             )
@@ -20,6 +24,18 @@ class ProductSerializer(serializers.ModelSerializer):
 class PartnersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Partners
+        fields = (
+            'id', 
+            'name', 
+            'image', 
+            'info'
+            )
+        
+
+
+class AdvertsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Adverts
         fields = (
             'id', 
             'name', 

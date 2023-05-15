@@ -1,0 +1,225 @@
+.vitrina {
+	padding: 40px 60px;
+	background: #5e5e5e;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.vitrina__left-section {
+	display: flex;
+	flex-direction: column;
+	height: 1400px;
+	gap: 30px;
+}
+
+.vitrina__left {
+	max-width: 675px;
+	min-width: 45%;
+	height: 815px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 25px;
+	background: #404040;
+	align-items: center;
+}
+
+.vitrina__left-top {
+}
+
+.vitrina__left-top__title {
+	font-size: 32px;
+	font-weight: 300;
+	color: rgb(255, 255, 255);
+	display: flex;
+	margin-top: 60px;
+	flex-direction: column;
+	text-align: center;
+}
+
+.vitrina__left-top__title .text-bold {
+	line-height: 20px;
+	font-weight: 500;
+}
+
+.vitrina__left-top__title .text-title {
+	font-size: 72px;
+	color: rgb(115, 113, 113);
+	line-height: 55px;
+}
+
+.vitrina__left-top__title .text-title .red {
+	color: rgba(216, 15, 15, 0.878);
+}
+
+.vitrina__left-bottom {
+	max-width: 675px;
+	min-width: 45%;
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 25px;
+	background: #404040;
+	align-items: center;
+	padding: 40px;
+	text-align: center;
+}
+
+.left-bottom-title {
+	font-size: 32px;
+	font-weight: 300;
+	color: rgb(255, 255, 255);
+}
+
+.left-bottom-description {
+	font-size: 20px;
+	font-weight: 300;
+	color: rgb(255, 255, 255);
+}
+
+.left-bottom-logos {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+	margin-top: 65px;
+}
+
+.left-bottom-logos img.allplay {
+	width: 180px;
+	height: 70px;
+}
+
+.left-bottom-logos img.youtube {
+	width: 280px;
+	height: 65px;
+}
+
+.vitrina__right-section {
+	display: flex;
+	flex-direction: column;
+	height: 1400px;
+	gap: 10px;
+}
+
+.right-top-text {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	color: #fff;
+	margin-top: 110px;
+}
+
+.vitrina__right-top {
+	position: relative;
+	overflow: hidden;
+	max-width: 730px;
+	min-width: 550px;
+	width: 730px;
+	height: 450px;
+	border-radius: 25px;
+	background: #404040;
+	align-items: center;
+	padding: 20px;
+}
+
+.right-top-title {
+	font-size: 52px;
+}
+
+.right-top-description {
+	font-size: 32px;
+	line-height: 34px;
+}
+
+.right-top-image {
+	position: absolute;
+	top: -221px;
+	right: -299px;
+	width: 700px;
+	height: 900px;
+}
+
+.vitrina__right-center {
+	position: relative;
+	max-width: 730px;
+	min-width: 550px;
+	width: 730px;
+	height: 350px;
+	border-radius: 25px;
+	background: #404040;
+	align-items: center;
+	padding: 20px;
+	overflow: hidden;
+	background-color: #c23175;
+}
+
+.right-center-text {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 40%;
+	right: 3%;
+	color: #fff;
+}
+
+.right-center-title {
+	font-size: 40px;
+	line-height: 28px;
+}
+
+.right-center-description {
+	font-size: 32px;
+	font-weight: 300;
+}
+
+.right-center-image {
+	position: absolute;
+	top: -295px;
+	left: -679px;
+	width: 700px;
+	height: 900px;
+}
+
+.vitrina__right-bottom {
+	max-width: 730px;
+	/* min-width: 45%; */
+	width: 730px;
+
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 25px;
+	background: #404040;
+	padding: 30px 40px;
+	background: url("../../../public/images/tv-dolby-8.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 25px;
+	position: relative;
+}
+
+.right-bottom-text {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	color: #fff;
+}
+
+.right-bottom-title {
+	font-size: 35px;
+	line-height: 50px;
+}
+
+.right-bottom-description {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.right-bottom-image {
+	position: absolute;
+	width: 150px;
+	top: 40%;
+	left: 10%;
+}
