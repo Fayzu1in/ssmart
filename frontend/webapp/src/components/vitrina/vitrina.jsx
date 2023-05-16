@@ -15,9 +15,17 @@ export function Vitrina() {
 						>
 							Smart TV <span style={{ fontWeight: "300" }}> на базе</span>
 						</span>
-						<span className="text-title" style={{}}>
+						<img
+							style={{
+								marginTop: "10px",
+							}}
+							src="./images/webos_logo.png"
+							alt=""
+							className="webos-logo"
+						/>
+						{/* <span className="text-title" style={{}}>
 							web<span className="red">OS</span>
-						</span>
+						</span> */}
 					</div>
 					<div className="vitrina__left-top-background">
 						<img

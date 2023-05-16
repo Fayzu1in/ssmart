@@ -70,8 +70,13 @@ export function Footer() {
 				</ul>
 			</div>
 			<div className="footer-rectangle"></div>
-			<span className="footer-rectangle-title">Smart</span>
-			<div className="footer__news">
+			<div className="footer-rectangle-title"></div>
+			<img
+				src="./images/logo.png"
+				alt=""
+				className="footer-rectangle-title main__logo"
+			/>
+			<div className="footer__social">
 				<span className="footer__news-title">Новости Ssmart</span>
 				<div className="footer__news-logos">
 					<a href="">instagram</a>
@@ -86,7 +91,9 @@ export function Footer() {
 					bottom: "6%",
 				}}
 			/>
-			<span className="copyright-text">Ssmart 2014-2023 все права защищены</span>
+			<span className="copyright-text">
+				Ssmart 2014-2023 все права защищены
+			</span>
 		</footer>
 	);
 }

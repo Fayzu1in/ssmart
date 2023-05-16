@@ -11,7 +11,7 @@ def index(request):
 class ProductList(generics.ListAPIView):
     # permissions_classes = [permissions.IsAuthenticated]
 
-    queryset = Product.objects.all()
+    queryset = Product.objects.filter(is_published=True)
     serializer_class = ProductSerializer
 
 

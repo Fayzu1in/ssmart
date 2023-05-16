@@ -9,7 +9,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: #c23175;
+	background: #bf1d69;
 	color: #fff;
 	font-size: 20px;
 	font-weight: 300;
@@ -71,6 +71,11 @@ button.btn {
 .globe {
 	height: 32px;
 	width: 32px;
+}
+
+.main__logo {
+	height: 72px;
+	/* width: 32px; */
 }
 
 @media screen and (max-width: 920px) {

@@ -17,7 +17,8 @@ class Product(models.Model):
     os = models.CharField('OS', max_length=255, blank=True, null=True)
     os_info = models.TextField('OS info', blank=True, null=True)
     status = models.CharField('Status', max_length=50, choices=status_choices, default='new')
-    price = models.DecimalField('Price', max_digits=12, decimal_places=0)
+    price = models.CharField('Price', max_length=255)
+    is_published = models.BooleanField('Published', default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

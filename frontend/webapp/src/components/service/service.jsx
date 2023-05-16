@@ -78,18 +78,22 @@ export function Service() {
 				<h2 className="partners__heading">Партнеры</h2>
 				<div className="partners__container">
 					{partners.map((partner) => (
-						<img
-							key={partner.id}
-							className="partners__image"
-							src={partner.image}
-							alt=""
-						/>
+						<div
+							style={{
+								backgroundImage: `url(${partner.image})`,
+								backgroundSize: "cover",
+								backgroundPosition: "center",
+							}}
+							className="partners__container-item"
+						>
+							{/* <img
+								key={partner.id}
+								className="partners__image"
+								src={partner.image}
+								alt=""
+							/> */}
+						</div>
 					))}
-					{/* <img
-						className="partners__image"
-						src="./images/idea-logo.png"
-						alt=""
-					/> */}
 				</div>
 			</div>
 		</section>

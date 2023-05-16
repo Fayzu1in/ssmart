@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "../../pages/home";
 import styles from "./header.css";
 import React, { useContext } from "react";
+import { Dealers } from "../../pages/dealers";
 
 export { Header };
 
@@ -11,7 +12,9 @@ function Header() {
 		<header className="header__main">
 			<div className="header__left">
 				<div className="header__main__logo">
-					<a href="/">SMART</a>
+					<a href="/">
+						<img className="main__logo" src="./images/logo.png" alt="" />
+					</a>
 					{/* <a href="">
 						<img src="./images/logo.png" alt="" />
 					</a> */}
@@ -52,7 +55,7 @@ function Header() {
 			</div>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/dealers" element={<Home />} />
+				<Route path="/dealers" element={<Dealers />} />
 				<Route path="/products" element={<Home />} />
 				<Route path="/service" element={<Home />} />
 			</Routes>

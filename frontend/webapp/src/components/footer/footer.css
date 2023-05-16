@@ -9,7 +9,9 @@
 .footer__container {
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
+	gap: 20px;
+	margin: 0 20px;
 }
 
 .footer__list {
@@ -23,7 +25,7 @@
 }
 
 .footer__list-item {
-	margin: 10px 0;
+	margin: 20px 0;
 }
 
 .footer__list-item a {
@@ -36,7 +38,7 @@
 	height: 500px;
 	transform: rotate(180deg);
 	position: absolute;
-	background-color: #c23175;
+	background-color: #bf1d69;
 	clip-path: polygon(39.56% -1.98%, 95% 100%, -65000% 100%);
 	top: 0;
 	right: 0;
@@ -51,12 +53,12 @@
 	position: absolute;
 	top: 40%;
 	z-index: 10000;
-	right: 1%;
+	right: 2%;
 }
 
-.footer__news {
+.footer__social {
 	position: absolute;
-	bottom: 25%;
+	bottom: 23%;
 	right: 20%;
 }
 
@@ -83,5 +85,5 @@
 	bottom: 10px;
 	left: 10px;
 	color: #fff;
-	font-size: 12px;
+	font-size: 16px;
 }

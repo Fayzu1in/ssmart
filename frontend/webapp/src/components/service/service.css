@@ -81,7 +81,7 @@
 .service-right-top {
 	width: 500px;
 	height: 190px;
-	background: #c23175;
+	background: #bf1d69;
 	border-radius: 30px;
 	padding: 30px;
 	display: flex;
@@ -142,11 +142,18 @@
 .partners__container {
 	display: flex;
 	justify-content: center;
-	gap: 20px;
+	gap: 30px;
 	margin-bottom: 70px;
 }
 
+.partners__container-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #5e5e5e;
+}
+
 .partners__image {
-	width: 30%;
-	height: 200px;
+	width: 270px;
+	height: 120px;
 }

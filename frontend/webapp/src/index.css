@@ -15,16 +15,39 @@
 } */
 
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap");
+
+@font-face {
+	font-family: "Jost";
+	src: local("Jost"), url("./fonts/static/Jost-Regular.ttf") format("truetype");
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Jost";
+	src: local("Jost"), url("./fonts/static/Jost-Light.ttf") format("truetype");
+	font-weight: lighter;
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: "Jost", sans-serif;
+	font-weight: normal;
 }
+
+/* ? main color */
+/* #bf1d69 */
 html {
 	font-family: "Jost", sans-serif;
+	font-weight: normal;
 	background: #5e5e5e;
 }
 
 body {
 	font-family: "Jost", sans-serif;
+	font-weight: normal;
+}
+
+.webos-logo {
+	width: 295px;
+	height: 70px;
 }

@@ -16,6 +16,7 @@ import { Footer } from "./components/footer/footer";
 import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "./pages/home";
 import { Dealers } from "./pages/dealers";
+import { WarrantyComponent } from "./warranty/warranty";
 function App() {
 	const [pictures, setPictures] = React.useState([]);
 
@@ -37,6 +38,7 @@ function App() {
 				<Vitrina />
 				<Products />
 				<Service />
+				<WarrantyComponent />
 				<Footer />
 				{/* <Routes>
 					<Route path="/" element={<Home />} />

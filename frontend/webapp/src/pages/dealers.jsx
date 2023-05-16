@@ -10,7 +10,6 @@ export function Dealers() {
 	return (
 		<>
 			<Products />
-            
 		</>
 	);
 }
