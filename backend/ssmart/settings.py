@@ -18,7 +18,8 @@ ALLOWED_HOSTS = ['*']
 
 # ALLOWED_HOSTS = ['http://localhost:3000', '193.168.49.170']
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = ["http://193.168.49.170/"]
+
 # CORS_ORIGIN_ALLOW_ALL = True
 
 
@@ -136,10 +137,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 
