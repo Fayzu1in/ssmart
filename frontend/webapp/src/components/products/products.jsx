@@ -20,7 +20,24 @@ export function Products() {
 	return (
 		<section className="products" id="products">
 			{/* <h1 style={{ textAlign: "center" }}>Products</h1> */}
-			<img className="products__image" src="./images/webos.png" alt="" />
+			<div className="product__os">
+				<div className="product__os-text">
+					<img
+						className="webos-logo"
+						style={{
+							marginTop: "20px",
+						}}
+						src="./images/webos_logo.png"
+						alt=""
+					/>
+					<span className="os-text">
+						ОПЕРАЦИОННАЯ СИСТЕМА И МАГАЗИН ПРИЛОЖЕНИЙ
+						<br />
+						<span className="os-text-light">ОТ КОМПАНИИ LG</span>
+					</span>
+				</div>
+				<img className="product-img" src="./images/os.jpeg" alt="" />
+			</div>
 			<img
 				className="products__image-center"
 				src="./images/remote.png"

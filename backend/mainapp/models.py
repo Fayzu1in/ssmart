@@ -64,3 +64,24 @@ class Adverts(models.Model):
         verbose_name = 'Advert'
         verbose_name_plural = 'Adverts'
         ordering = ['-created']
+
+
+
+class Warranty(models.Model):
+    series = models.CharField(max_length=255)
+    talon = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    dealer = models.CharField(max_length=255)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Warranty'
+        verbose_name_plural = 'Warranties'
+        ordering = ['-created']
+
+
+    def __str__(self) -> str:
+        return f'{self.name}: {self.series} {self.talon}'

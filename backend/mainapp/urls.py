@@ -10,6 +10,7 @@ urlpatterns = [
     path('products/', ProductList.as_view(), name='products'),
     path('partners/', PartnersList.as_view(), name='partners'),
     path('adverts/', AdvertsList.as_view(), name='adverts'),
+    path('warranty/', WarrantyList.as_view(), name='warranty'),
 ]
 
 

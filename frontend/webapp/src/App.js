@@ -16,7 +16,8 @@ import { Footer } from "./components/footer/footer";
 import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "./pages/home";
 import { Dealers } from "./pages/dealers";
-import { WarrantyComponent } from "./warranty/warranty";
+import { WarrantyComponent } from "./components/warranty/warranty";
+import { Warranty } from "./pages/warranty-service";
 function App() {
 	const [pictures, setPictures] = React.useState([]);
 
@@ -34,18 +35,18 @@ function App() {
 		<div className="App">
 			<BrowserRouter>
 				<Header />
-				<Hero />
-				<Vitrina />
-				<Products />
-				<Service />
-				<WarrantyComponent />
-				<Footer />
-				{/* <Routes>
+				{/* <Hero /> */}
+				{/* <Vitrina /> */}
+				{/* <Products /> */}
+				{/* <Service /> */}
+				{/* <WarrantyComponent /> */}
+				{/* <Footer /> */}
+				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/dealers" element={<Dealers />} />
-					<Route path="/products" element={<Home />} />
-					<Route path="/service" element={<Home />} />
-				</Routes> */}
+					{/* <Route path="/dealers" element={<Dealers />} />
+					<Route path="/products" element={<Home />} /> */}
+					<Route path="/service" element={<Warranty />} />
+				</Routes>
 			</BrowserRouter>
 			{/* <CCarousel controls indicators dark>
 				{pictures.map((picture) => (

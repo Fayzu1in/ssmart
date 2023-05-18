@@ -23,9 +23,6 @@ export function Vitrina() {
 							alt=""
 							className="webos-logo"
 						/>
-						{/* <span className="text-title" style={{}}>
-							web<span className="red">OS</span>
-						</span> */}
 					</div>
 					<div className="vitrina__left-top-background">
 						<img

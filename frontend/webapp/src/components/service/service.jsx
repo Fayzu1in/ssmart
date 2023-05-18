@@ -85,6 +85,7 @@ export function Service() {
 								backgroundPosition: "center",
 							}}
 							className="partners__container-item"
+							key={partner.id}
 						>
 							{/* <img
 								key={partner.id}

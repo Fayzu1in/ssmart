@@ -16,6 +16,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+# CORS_ORIGIN_ALLOW_ALL = True
+
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
+
+
 
 # Application definition
 
@@ -26,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'mainapp',
     'rest_framework',
 ]
@@ -38,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'ssmart.urls'

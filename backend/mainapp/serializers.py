@@ -42,3 +42,18 @@ class AdvertsSerializer(serializers.ModelSerializer):
             'image', 
             'info'
             )
+        
+
+
+class WarrantySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Warranty
+        fields = (
+            'id', 
+            'name', 
+            'series', 
+            'talon', 
+            'phone', 
+            'city', 
+            'dealer'
+            )

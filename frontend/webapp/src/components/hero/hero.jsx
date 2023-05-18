@@ -15,9 +15,6 @@ export function Hero() {
 							src="./images/webos_logo.png"
 							alt=""
 						/>
-						{/* <span className="text-title">
-							web<span className="text-title-red">OS</span>
-						</span> */}
 					</div>
 					<div className="hero__main__picture"></div>
 					<div className="hero__logos">

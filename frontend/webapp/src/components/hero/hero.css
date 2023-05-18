@@ -34,7 +34,7 @@
 	width: 100%;
 	max-width: 1400px;
 	height: 1100px;
-	/* background: url("../../../public/images/стартовый-тв.png"); */
+	background: url("../../../public/images/стартовый-тв.png");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -81,7 +81,7 @@
 	justify-content: center;
 	margin-bottom: 90px;
 
-	width: 90%;
+	width: 97%;
 }
 
 .hero__logos img {

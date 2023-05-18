@@ -2,7 +2,7 @@ import { styles } from "./footer.css";
 
 export function Footer() {
 	return (
-		<footer className="footer">
+		<footer className="foot">
 			<div className="footer__container">
 				<ul className="footer__list">
 					<span className="footer__list-title">Поддержка</span>
