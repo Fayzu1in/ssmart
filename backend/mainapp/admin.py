@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import *
 # Register your models here.
-
+from django.utils.safestring import mark_safe
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
@@ -17,8 +17,20 @@ class PartnersAdmin(admin.ModelAdmin):
 
 @admin.register(Adverts)
 class AdvertsAdmin(admin.ModelAdmin):
-    list_display = ('name', 'created', 'updated')
+    list_display = (
+                    'name', 
+                    'created', 
+                    'updated', 
+                    'display_image'
+                    )
 
+    def display_image(self, obj):
+        return mark_safe('<img src="api{url}" width="{width}" height={height} />'.format(
+            url=obj.image.url,
+            width=300,
+            height=200,
+        )
+        )
 
 
 @admin.register(Warranty)
