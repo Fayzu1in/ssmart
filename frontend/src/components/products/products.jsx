@@ -6,7 +6,7 @@ export function Products() {
 	const [products, setProducts] = useState([]);
 
 	async function getProducts() {
-		const response = await fetch("http://193.168.49.170/api/products");
+		const response = await fetch("http://193.168.49.170/api/products/");
 		const data = await response.json();
 		setProducts(data);
 	}

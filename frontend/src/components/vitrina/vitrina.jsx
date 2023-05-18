@@ -26,7 +26,7 @@ export function Vitrina() {
 					</div>
 					<div className="vitrina__left-top-background">
 						<img
-							src="./images/стартовый-тв.png"
+							src="./images/start.png"
 							alt=""
 							style={{
 								width: "650",
