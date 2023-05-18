@@ -5,13 +5,13 @@ export function Service() {
 	const [banner, setBanner] = useState("");
 
 	async function getPartners() {
-		const response = await fetch("http://localhost:8000/partners/");
+		const response = await fetch("http://193.168.49.170/api/partners/");
 		const data = await response.json();
 		setPartners(data);
 	}
 
 	async function getBanner() {
-		const response = await fetch("http://localhost:8000/adverts/");
+		const response = await fetch("http://193.168.49.170/api/adverts/");
 		const data = await response.json();
 		setBanner(data);
 	}

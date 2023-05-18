@@ -16,7 +16,12 @@ export function Hero() {
 							alt=""
 						/>
 					</div>
-					<div className="hero__main__picture"></div>
+					<div
+						className="hero__main__picture"
+						style={{
+							backgroundImage: "url(./images/start.png)",
+						}}
+					></div>
 					<div className="hero__logos">
 						<img src="./images/hdmi.png" alt="" className="hero__logos__hdmi" />
 						<img

@@ -30,7 +30,7 @@ export function WarrantyComponent() {
 
 	const sendFormData = async (data) => {
 		try {
-			const response = await fetch("http://127.0.0.1:8000/warranty/", {
+			const response = await fetch("http://193.168.49.170/api/warranty/", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

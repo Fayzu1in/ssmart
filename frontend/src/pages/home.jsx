@@ -16,7 +16,7 @@ export function Home() {
 			<Vitrina />
 			<Products />
 			<Service />
-			<WarrantyComponent />
+			{/* <WarrantyComponent /> */}
 			<Footer />
 		</>
 	);
