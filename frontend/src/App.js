@@ -22,7 +22,7 @@ function App() {
 	const [pictures, setPictures] = React.useState([]);
 
 	async function fetchPictures() {
-		const response = await fetch("http://193.168.49.170/api/products//");
+		const response = await fetch("http://193.168.49.170/api/products/");
 		const data = await response.json();
 		setPictures(data);
 	}
