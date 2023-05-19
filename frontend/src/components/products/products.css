@@ -55,9 +55,12 @@
 
 .products__main-picture {
 	position: absolute;
-	width: 600px;
-	height: 810px;
-	top: -38px;
+	width: 500px;
+	height: 350px;
+	top: 215px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .container-main-bottom {

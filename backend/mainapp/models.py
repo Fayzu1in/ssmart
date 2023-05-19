@@ -36,6 +36,7 @@ class Partners(models.Model):
     name = models.CharField(max_length=255)
     image = models.ImageField('picture', upload_to='pictures/products')
     info = models.TextField('Description')
+    background_color = models.CharField('Background color', max_length=255, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

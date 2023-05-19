@@ -12,11 +12,17 @@ export function ProductsContainer({
 		<div className="products__container">
 			<div className="products__container-main">
 				<span className="container-main-title">{title}</span>
-				<img
+				<div
 					className="products__main-picture"
-					src={image1 || "./images/ssmart-tv-5.png"}
-					alt=""
-				/>
+					style={{
+						backgroundImage: `url(${image1})`,
+					}}
+				></div>
+				{/* <img
+					className="products__main-picture"
+					src={image1 || ""}
+					alt="product"
+				/> */}
 				<div className="container-main-bottom">
 					<span className="main-bottom-price">{price} Сум</span>
 					<button className="btn-primary">Купить</button>
@@ -36,11 +42,17 @@ export function ProductsContainer({
 					>
 						Подробнее
 					</button>
-					<img
+					<div
+						className="right-top-image"
+						style={{
+							backgroundImage: `url(${image2})`,
+						}}
+					></div>
+					{/* <img
 						className="right-top-image"
 						src={image2 || "./images/ssmart-tv-3.png"}
 						alt=""
-					/>
+					/> */}
 					<span className="characteristics">Характеристики</span>
 				</div>
 				<img

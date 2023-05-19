@@ -130,10 +130,13 @@
 
 .right-top-image {
 	position: absolute;
-	top: -221px;
-	right: -299px;
-	width: 700px;
-	height: 900px;
+	top: 0;
+	right: -9px;
+	width: 320px;
+	height: 450px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .vitrina__right-center {
