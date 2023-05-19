@@ -35,14 +35,16 @@ export function Service() {
 				>
 					Reklama
 				</h1>
-				<img
+				<div
+					className="banner-image"
 					style={{
 						width: "100%",
 						height: "100%",
+						backgroundImage: `url(${banner[0]?.image})`,
+						backgroundSize: "cover",
+						backgroundPosition: "center",
 					}}
-					src={banner[0]?.image || "./images/tv-dolby-8.png"}
-					alt=""
-				/>
+				></div>
 			</div>
 			<h1 className="service-heading">Гарантия и Сервис</h1>
 			<div className="service__container">
@@ -80,6 +82,7 @@ export function Service() {
 					{partners.map((partner) => (
 						<div
 							style={{
+								backgroundColor: `${partner.background__color}` || "white",
 								backgroundImage: `url(${partner.image})`,
 								backgroundSize: "cover",
 								backgroundPosition: "center",

@@ -150,7 +150,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #5e5e5e;
+	/* background-color: #5e5e5e; */
 }
 
 .partners__image {
