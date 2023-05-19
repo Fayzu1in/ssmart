@@ -79,16 +79,20 @@
 	gap: 40px;
 	/* max-width: 1060px; */
 	justify-content: center;
+	align-items: center;
 	margin-bottom: 90px;
 
 	width: 97%;
 }
 
 .hero__logos img {
-	width: 155px;
+	/* width: 155px; */
 	height: 65px;
 }
 
+#wifi {
+	height: 95px;
+}
 .hero__logos__4k {
 	font-size: 36px;
 	font-weight: bold;

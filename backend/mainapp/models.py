@@ -10,8 +10,8 @@ class Product(models.Model):
     }
 
     name = models.CharField(max_length=255)
-    image1 = models.ImageField('picture-1', upload_to='images/products')
-    image2 = models.ImageField('picture-2', upload_to='images/products', blank=True, null=True)
+    image1 = models.ImageField('picture-1', upload_to='pictures/products')
+    image2 = models.ImageField('picture-2', upload_to='pictures/products', blank=True, null=True)
     character = models.TextField('Characteristics', blank=True, null=True)
     descripton = models.TextField('Description', blank=True, null=True)
     os = models.CharField('OS', max_length=255, blank=True, null=True)
@@ -34,7 +34,7 @@ class Product(models.Model):
 
 class Partners(models.Model):
     name = models.CharField(max_length=255)
-    image = models.ImageField('picture', upload_to='images/products')
+    image = models.ImageField('picture', upload_to='pictures/products')
     info = models.TextField('Description')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -51,7 +51,7 @@ class Partners(models.Model):
 
 class Adverts(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
-    image = models.ImageField('picture', upload_to='images/products')
+    image = models.ImageField('picture', upload_to='pictures/products')
     info = models.TextField('Description', blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
