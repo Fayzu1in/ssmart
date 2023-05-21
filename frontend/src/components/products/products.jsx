@@ -42,7 +42,9 @@ export function Products() {
 				src="./images/remote.png"
 				alt=""
 			/>
-			<h1 className="products__heading">Продукция</h1>
+			<h1 id="products__heading" className="products__heading">
+				Продукция
+			</h1>
 			{products.map((product) => (
 				<ProductsContainer
 					title={product.name}

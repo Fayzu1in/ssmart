@@ -47,3 +47,40 @@ class WarrantyList(generics.ListAPIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(status=status.HTTP_400_BAD_REQUEST)
+    
+
+
+class WarrantyDataList(generics.ListAPIView):
+    # permissions = [permissions.IsAuthenticated]
+
+    queryset = WarrantyData.objects.all()
+    serializer_class = WarrantyDataSerializer
+
+    def get(self, request, *args, **kwargs):
+        queryset = WarrantyData.objects.all()
+        serializer = WarrantyDataSerializer(queryset, many=True)
+        series = request.query_params.get('series', None)
+
+        if series:
+            queryset = queryset.filter(series=series)
+            serializer = WarrantyDataSerializer(queryset, many=True)
+
+            if queryset:
+                return Response({
+                    'found': True,
+                })
+            else:
+                return Response({
+                    'found': False,
+                })
+    
+
+        return Response(serializer.data)
+
+
+    # def post(self, request, *args, **kwargs):
+    #     serializer = WarrantyDataSerializer(data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    #     return Response(status=status.HTTP_400_BAD_REQUEST)

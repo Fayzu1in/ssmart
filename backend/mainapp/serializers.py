@@ -57,3 +57,13 @@ class WarrantySerializer(serializers.ModelSerializer):
             'city', 
             'dealer'
             )
+        
+
+
+class WarrantyDataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WarrantyData
+        fields = (
+            'id', 
+            'series'
+            )

@@ -36,3 +36,10 @@ class AdvertsAdmin(admin.ModelAdmin):
 @admin.register(Warranty)
 class Warranty(admin.ModelAdmin):
     list_display = ('name', 'series', 'talon', 'phone', 'city', 'dealer', 'created', 'updated')
+
+
+@admin.register(WarrantyData)
+class WarrantyDataAdmin(admin.ModelAdmin):
+    list_display = ['series', 'created']
+
+

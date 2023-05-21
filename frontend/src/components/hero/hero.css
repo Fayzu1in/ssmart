@@ -83,6 +83,7 @@
 	margin-bottom: 90px;
 
 	width: 97%;
+	flex-wrap: wrap;
 }
 
 .hero__logos img {
@@ -111,4 +112,10 @@
 	height: 200px;
 	border-radius: 20px;
 	background-color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+	.hero__logos {
+		bottom: -50px;
+	}
 }

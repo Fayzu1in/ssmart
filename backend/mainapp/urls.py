@@ -11,6 +11,7 @@ urlpatterns = [
     path('partners/', PartnersList.as_view(), name='partners'),
     path('adverts/', AdvertsList.as_view(), name='adverts'),
     path('warranty/', WarrantyList.as_view(), name='warranty'),
+    path('warrantydata/', WarrantyDataList.as_view(), name='warrantydata'),
 ]
 
 

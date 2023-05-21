@@ -1,5 +1,5 @@
 import styles from "./header.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 export { Header };
 
 function Header() {
@@ -11,12 +11,32 @@ function Header() {
 		header__language.classList.toggle("active");
 	}
 
-	function HandleClick(event) {
-		console.log(event.target.classList.toggle("active"));
-		setLanguage(event.target.id);
-		console.log(language);
-	}
+	const HandleClick = (e, lang) => {
+		// console.log(e.target.classList.toggle("active"));
+		let en = document.getElementById("en");
+		let ru = document.getElementById("ru");
+		let uz = document.getElementById("uz");
+		if (lang === "en") {
+			en.classList.add("active");
+			ru.classList.remove("active");
+			uz.classList.remove("active");
+			setLanguage("en");
+		} else if (lang === "ru") {
+			en.classList.remove("active");
+			ru.classList.add("active");
+			uz.classList.remove("active");
+			setLanguage("ru");
+		} else if (lang === "uz") {
+			en.classList.remove("active");
+			ru.classList.remove("active");
+			uz.classList.add("active");
+			setLanguage("uz");
+		}
+	};
 
+	useEffect(() => {
+		console.log(language);
+	}, [language]);
 	return (
 		<header className="header__main">
 			<div className="header__left">
@@ -31,7 +51,7 @@ function Header() {
 							<a href="#vitrina">Дилерам</a>
 						</li>
 						<li className="header__main__nav__list__item">
-							<a href="#products">Продукция</a>
+							<a href="#products__heading">Продукция</a>
 						</li>
 						<li className="header__main__nav__list__item">
 							<a href="/service">Гарантия/Сервис</a>
@@ -53,23 +73,28 @@ function Header() {
 								id="globe"
 								onClick={LanguageCall}
 							/>
-							<div
-								className="header__language"
-								id="header__language"
-							>
+							<div className="header__language" id="header__language">
 								<div
-									onClick={HandleClick}
+									onClick={(e) => HandleClick(e, "en")}
 									id="en"
-									className="language-item active"
+									className="language-item"
 								>
 									{/* <a href="">EN</a> */}
 									EN
 								</div>
-								<div onClick={HandleClick} id="ru" className="language-item">
+								<div
+									onClick={(e) => HandleClick(e, "ru")}
+									id="ru"
+									className="language-item active"
+								>
 									{/* <a href="">RU</a> */}
 									RU
 								</div>
-								<div onClick={HandleClick} id="uz" className="language-item">
+								<div
+									onClick={(e) => HandleClick(e, "uz")}
+									id="uz"
+									className="language-item"
+								>
 									{/* <a href="">UZ</a> */}
 									UZ
 								</div>

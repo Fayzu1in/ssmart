@@ -1,9 +1,34 @@
 import { Guidance } from "../guidance/guidance";
 import { styles } from "./warranty.css";
-import { useRef, useState } from "react";
-
+import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 export function WarrantyComponent() {
 	const formRef = useRef(null);
+
+	const [seriesInput, setSeriesInput] = useState("");
+	const [talonInput, setTalonInput] = useState("");
+	const [nameInput, setNameInput] = useState("");
+	const [phoneInput, setPhoneInput] = useState("");
+	const [cityInput, setCityInput] = useState("");
+	const [dealerInput, setDealerInput] = useState("");
+
+	const [seriesVerified, setSeriesVerified] = useState(false);
+
+	//? Получение всех серийных номеров из базы данных
+	// const [seriesData, setSeriesData] = useState([]);
+	// async function getSeriesData() {
+	// 	try {
+	// 		const response = await fetch("http://127.0.0.1:8000/api/warrantydata/");
+	// 		const data = await response.json();
+	// 		setSeriesData(data);
+	// 	} catch (error) {
+	// 		console.error("Error fetching series data:", error);
+	// 	}
+	// }
+
+	// useEffect(() => {
+	// 	getSeriesData();
+	// }, []);
 
 	const [formData, setFormData] = useState({
 		series: "",
@@ -21,7 +46,57 @@ export function WarrantyComponent() {
 		sendFormData(formData);
 	};
 
-	const handleChange = (e) => {
+	const checkSeries = (series) => {
+		axios
+			.get(`http://127.0.0.1:8000/api/warrantydata/?series=${series}`)
+			.then((response) => {
+				// Handle the response from the API
+				let is_found = response.data["found"];
+				setSeriesVerified(is_found);
+				let seriesInputStyle = document.getElementById("series");
+				if (is_found) {
+					seriesInputStyle.classList.add("verified");
+					seriesInputStyle.classList.remove("not-verified");
+				} else {
+					seriesInputStyle.classList.add("not-verified");
+					seriesInputStyle.classList.remove("verified");
+				}
+			})
+			.catch((error) => {
+				console.error(error);
+			});
+	};
+
+	const handleChange = (e, input) => {
+		const value = e.target.value;
+
+		switch (input) {
+			case "series":
+				setSeriesInput(value);
+				checkSeries(e.target.value);
+				// if (e.target.value.length === 15) {
+				// 	checkSeries(e.target.value);
+				// }
+				break;
+			case "talon":
+				setTalonInput(value);
+				break;
+			case "name":
+				setNameInput(value);
+				break;
+			case "phone":
+				setPhoneInput(value);
+				break;
+			case "city":
+				setCityInput(value);
+				break;
+			case "dealer":
+				setDealerInput(value);
+				break;
+
+			default:
+				break;
+		}
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value,
@@ -84,11 +159,12 @@ export function WarrantyComponent() {
 								<div className="form__input">
 									<label htmlFor="series">1</label>
 									<input
-										onChange={handleChange}
+										onChange={(e) => handleChange(e, "series")}
 										type="text"
 										name="series"
 										id="series"
 										required
+										maxLength={15}
 									/>
 									<label className="label-main" htmlFor="series">
 										Серийный номер
@@ -97,11 +173,12 @@ export function WarrantyComponent() {
 								<div className="form__input">
 									<label htmlFor="talon">2</label>
 									<input
-										onChange={handleChange}
+										onChange={(e) => handleChange(e, "talon")}
 										type="text"
 										name="talon"
 										id="talon"
 										required
+										disabled={seriesVerified == false || seriesInput == ""}
 									/>
 									<label className="label-main" htmlFor="talon">
 										No гарантийного Талона
@@ -110,11 +187,12 @@ export function WarrantyComponent() {
 								<div className="form__input">
 									<label htmlFor="name">3</label>
 									<input
-										onChange={handleChange}
+										onChange={(e) => handleChange(e, "name")}
 										type="text"
 										name="name"
 										id="name"
 										required
+										disabled={seriesInput == "" || talonInput == ""}
 									/>
 									<label className="label-main" htmlFor="name">
 										И.Ф.О.
@@ -123,11 +201,14 @@ export function WarrantyComponent() {
 								<div className="form__input">
 									<label htmlFor="phone">4</label>
 									<input
-										onChange={handleChange}
+										onChange={(e) => handleChange(e, "phone")}
 										type="text"
 										name="phone"
 										id="phone"
 										required
+										disabled={
+											seriesInput == "" || talonInput == "" || nameInput == ""
+										}
 									/>
 									<label className="label-main" htmlFor="phone">
 										Номер телефона
@@ -136,11 +217,17 @@ export function WarrantyComponent() {
 								<div className="form__input">
 									<label htmlFor="city">5</label>
 									<input
-										onChange={handleChange}
+										onChange={(e) => handleChange(e, "city")}
 										type="text"
 										name="city"
 										id="city"
 										required
+										disabled={
+											seriesInput == "" ||
+											talonInput == "" ||
+											nameInput == "" ||
+											phoneInput == ""
+										}
 									/>
 									<label className="label-main" htmlFor="city">
 										Город
@@ -149,11 +236,18 @@ export function WarrantyComponent() {
 								<div className="form__input">
 									<label htmlFor="dealer">6</label>
 									<input
-										onChange={handleChange}
+										onChange={(e) => handleChange(e, "dealer")}
 										type="text"
 										name="dealer"
 										id="dealer"
 										required
+										disabled={
+											seriesInput == "" ||
+											talonInput == "" ||
+											nameInput == "" ||
+											phoneInput == "" ||
+											cityInput == ""
+										}
 									/>
 									<label className="label-main" htmlFor="dealer">
 										Продавец/Диллер

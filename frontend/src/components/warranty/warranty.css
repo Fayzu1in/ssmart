@@ -48,7 +48,7 @@
 }
 
 .heading__form {
-	padding: 10px 5px 20px 5px;
+	padding: 10px 5px 45px 5px;
 	background-color: #5e5e5e;
 	border-radius: 20px;
 }
@@ -74,6 +74,7 @@
 	border-radius: 20px;
 	text-align: center;
 	outline: none;
+	border: none;
 }
 
 .form__input {
@@ -204,4 +205,12 @@
 	font-size: 22px;
 	display: block;
 	text-align: center;
+}
+
+#series.verified {
+	color: #07e107;
+}
+
+#series.not-verified {
+	color: red;
 }
