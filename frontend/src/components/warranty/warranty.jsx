@@ -2,6 +2,7 @@ import { Guidance } from "../guidance/guidance";
 import { styles } from "./warranty.css";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import PhoneNumberInput from "../input/phone-ipnut";
 export function WarrantyComponent() {
 	const formRef = useRef(null);
 
@@ -210,6 +211,7 @@ export function WarrantyComponent() {
 											seriesInput == "" || talonInput == "" || nameInput == ""
 										}
 									/>
+									{/* <PhoneNumberInput /> */}
 									<label className="label-main" htmlFor="phone">
 										Номер телефона
 									</label>

@@ -1,5 +1,5 @@
 .header__main {
-	padding: 5px 35px;
+	padding: 0px 35px;
 	background-color: #000;
 	display: flex;
 	justify-content: space-between;
@@ -30,10 +30,11 @@
 .header__main__user {
 	display: flex;
 	gap: 10px;
+	align-items: center;
 }
 
 .header__main__user a {
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .header__language {
@@ -45,7 +46,9 @@ button.btn {
 	height: 30px;
 	border-radius: 5px;
 }
-
+a.btn {
+	height: 40px;
+}
 /* .header__main__user a {
 } */
 
@@ -62,7 +65,7 @@ button.btn {
 .header__main__nav__list li a {
 	color: #fff;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 400;
 	padding: 0 20px;
 }
@@ -79,7 +82,7 @@ button.btn {
 }
 
 .main__logo {
-	height: 52px;
+	height: 46px;
 	/* width: 32px; */
 }
 

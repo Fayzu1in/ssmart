@@ -29,8 +29,7 @@ export function Vitrina() {
 							src="./images/start.png"
 							alt=""
 							style={{
-								width: "650",
-								height: "450px",
+								height: "330px",
 							}}
 						/>
 					</div>
@@ -52,7 +51,9 @@ export function Vitrina() {
 					<div className="right-top-text">
 						<span className="right-top-title">Ultra HD 4K</span>
 						<span className="right-top-description">
-							Дисплей с яркими Цветами
+							Дисплей с яркими
+							<br />
+							Цветами
 						</span>
 					</div>
 					<img

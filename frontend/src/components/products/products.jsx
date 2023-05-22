@@ -25,6 +25,8 @@ export function Products() {
 						className="webos-logo"
 						style={{
 							marginTop: "20px",
+							width: "230px",
+							height: "unset",
 						}}
 						src="./images/webos_logo.png"
 						alt=""

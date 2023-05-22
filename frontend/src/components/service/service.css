@@ -159,3 +159,9 @@
 	width: 270px;
 	height: 120px;
 }
+/* 
+@media screen and (min-width: 1500px) {
+	.banner-image {
+		background-size: cover !important;
+	}
+} */
