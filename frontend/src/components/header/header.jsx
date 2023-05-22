@@ -48,10 +48,10 @@ function Header() {
 				<nav className="header__main__nav">
 					<ul className="header__main__nav__list">
 						<li className="header__main__nav__list__item">
-							<a href="#vitrina">Дилерам</a>
+							<a href="http://localhost:3000#vitrina">Дилерам</a>
 						</li>
 						<li className="header__main__nav__list__item">
-							<a href="#products__heading">Продукция</a>
+							<a href="http://localhost:3000#products__heading">Продукция</a>
 						</li>
 						<li className="header__main__nav__list__item">
 							<a href="/service">Гарантия/Сервис</a>

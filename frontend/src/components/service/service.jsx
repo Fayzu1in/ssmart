@@ -41,8 +41,9 @@ export function Service() {
 						width: "100%",
 						height: "100%",
 						backgroundImage: `url(${banner[0]?.image})`,
-						backgroundSize: "cover",
+						backgroundSize: "contain",
 						backgroundPosition: "center",
+						backgroundRepeat: "no-repeat",
 					}}
 				></div>
 			</div>
