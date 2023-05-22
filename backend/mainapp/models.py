@@ -33,10 +33,17 @@ class Product(models.Model):
 
 
 class Partners(models.Model):
+
+    background_color_choices = {
+        ('#ffffff', 'White'),
+        ('#000000', 'Black'),
+        ('grey', 'Grey'),
+    }
+
     name = models.CharField('Имя',max_length=255)
     image = models.ImageField('Картинка', upload_to='pictures/products')
     info = models.TextField('Описание')
-    background_color = models.CharField('Задний фон', max_length=255, blank=True, null=True)
+    background_color = models.CharField('Задний фон', max_length=255, choices=background_color_choices, blank=True, null=True, default='#ffffff')
     created = models.DateTimeField("Создан",auto_now_add=True)
     updated = models.DateTimeField("Изменен",auto_now=True)
 
@@ -46,7 +53,7 @@ class Partners(models.Model):
 
     class Meta:
         verbose_name = 'Партнер'
-        verbose_name_plural = 'Партнер'
+        verbose_name_plural = 'Партнеры'
         ordering = ['-created']
 
 

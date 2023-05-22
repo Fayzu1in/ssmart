@@ -119,3 +119,53 @@
 		bottom: -50px;
 	}
 }
+
+@media screen and (max-width: 660px) {
+	.rectangle,
+	.rectangle__title {
+		display: none;
+	}
+
+	.hero__main {
+		height: 1100px;
+	}
+
+	.hero__main__picture {
+		position: absolute;
+		top: 205px;
+		left: 0;
+		height: 307px;
+		width: 395px;
+	}
+
+	.hero__main__ttile {
+		font-size: 32px;
+	}
+
+	.webos-logo {
+		width: 240px;
+		height: 55px;
+		margin-top: 10px !important;
+	}
+
+	.hero__logos {
+		/* bottom: 0; */
+		flex-direction: column;
+		width: 100%;
+		left: 0;
+	}
+
+	.hero__logos img {
+		height: 40px;
+	}
+
+	#wifi {
+		height: 75px;
+	}
+
+	.hero__logos__4k {
+		font-size: 24px;
+		width: 75px;
+		height: 50px;
+	}
+}

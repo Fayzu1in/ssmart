@@ -27,14 +27,14 @@ export function Service() {
 	return (
 		<section className="service" id="service">
 			<div className="banner">
-				<h1
+				{/* <h1
 					style={{
 						textAlign: "center",
 						color: "white",
 					}}
 				>
 					Reklama
-				</h1>
+				</h1> */}
 				<div
 					className="banner-image"
 					style={{

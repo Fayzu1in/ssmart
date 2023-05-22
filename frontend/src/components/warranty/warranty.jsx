@@ -48,7 +48,7 @@ export function WarrantyComponent() {
 
 	const checkSeries = (series) => {
 		axios
-			.get(`http://127.0.0.1:8000/api/warrantydata/?series=${series}`)
+			.get(`http://193.168.49.170/api/warrantydata/?series=${series}`)
 			.then((response) => {
 				// Handle the response from the API
 				let is_found = response.data["found"];

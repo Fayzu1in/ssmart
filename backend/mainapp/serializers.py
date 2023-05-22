@@ -28,6 +28,7 @@ class PartnersSerializer(serializers.ModelSerializer):
             'id', 
             'name', 
             'image', 
+            'background_color',
             'info'
             )
         

@@ -119,4 +119,15 @@ button.btn {
 	.header__main__nav {
 		display: none;
 	}
+
+	.header__main__user {
+		display: none;
+	}
+
+	.header__main {
+		padding: 5px 10px;
+	}
+}
+
+@media screen and (max-width: 660px) {
 }

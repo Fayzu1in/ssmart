@@ -87,3 +87,29 @@
 	color: #fff;
 	font-size: 16px;
 }
+
+@media screen and (max-width: 600px) {
+	.footer-rectangle,
+	.footer-rectangle-title,
+	.footer__social {
+		display: none;
+	}
+
+	.foot {
+		height: unset;
+	}
+
+	.footer__list {
+		font-size: 14px;
+	}
+
+	.footer__container {
+		flex-direction: column;
+		gap: 0;
+		margin: 0;
+	}
+
+	hr {
+		bottom: 25px !important;
+	}
+}

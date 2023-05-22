@@ -1,3 +1,9 @@
 .warranty {
 	padding-top: 130px;
 }
+
+@media screen and (max-width: 400px) {
+	.warranty {
+		padding-top: 70px;
+	}
+}
