@@ -18,6 +18,7 @@ import { Home } from "./pages/home";
 import { Dealers } from "./pages/dealers";
 import { WarrantyComponent } from "./components/warranty/warranty";
 import { Warranty } from "./pages/warranty-service";
+import { AboutUs } from "./pages/about-us";
 function App() {
 	return (
 		<div className="App">
@@ -31,6 +32,7 @@ function App() {
 				{/* <Footer /> */}
 				<Routes>
 					<Route path="/" element={<Home />} />
+					<Route path="/about-us" element={<AboutUs />} />
 					{/* <Route path="/dealers" element={<Dealers />} />
 					<Route path="/products" element={<Home />} /> */}
 					<Route path="/service" element={<Warranty />} />

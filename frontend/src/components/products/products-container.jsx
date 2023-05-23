@@ -37,6 +37,7 @@ export function ProductsContainer({
 					<button
 						style={{
 							marginTop: "70px",
+							fontSize: "24px",
 						}}
 						className="btn-primary"
 					>

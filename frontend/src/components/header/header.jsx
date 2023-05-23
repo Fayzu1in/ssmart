@@ -48,6 +48,9 @@ function Header() {
 				<nav className="header__main__nav">
 					<ul className="header__main__nav__list">
 						<li className="header__main__nav__list__item">
+							<a href="about-us">О компании</a>
+						</li>
+						<li className="header__main__nav__list__item">
 							<a href="http://localhost:3000#vitrina">Дилерам</a>
 						</li>
 						<li className="header__main__nav__list__item">
@@ -108,10 +111,10 @@ function Header() {
 					Поддержка
 				</a>
 				<a href="" className="btn">
-					<img src="./images/basket(2).png" alt="" />
+					<img width={"24px"} src="./images/basket(2).png" alt="" />
 				</a>
 				<a href="" className="btn">
-					<img src="./images/user.png" alt="" />
+					<img width={"24px"} src="./images/user.png" alt="" />
 				</a>
 			</div>
 		</header>
