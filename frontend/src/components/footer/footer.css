@@ -88,6 +88,14 @@
 	font-size: 16px;
 }
 
+@media screen and (max-width: 1200px) {
+	.footer-rectangle,
+	.footer-rectangle-title,
+	.footer__social {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.footer-rectangle,
 	.footer-rectangle-title,

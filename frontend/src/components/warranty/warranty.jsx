@@ -49,7 +49,7 @@ export function WarrantyComponent() {
 
 	const checkSeries = (series) => {
 		axios
-			.get(`http://193.168.49.170/api/warrantydata/?series=${series}`)
+			.get(`https://ssmart.uz/api/warrantydata/?series=${series}`)
 			.then((response) => {
 				// Handle the response from the API
 				let is_found = response.data["found"];
@@ -106,7 +106,7 @@ export function WarrantyComponent() {
 
 	const sendFormData = async (data) => {
 		try {
-			const response = await fetch("http://193.168.49.170/api/warranty/", {
+			const response = await fetch("https://ssmart.uz/api/warranty/", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

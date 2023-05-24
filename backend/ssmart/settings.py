@@ -18,7 +18,7 @@ ALLOWED_HOSTS = ['*']
 
 # ALLOWED_HOSTS = ['http://localhost:3000', '193.168.49.170']
 
-# CORS_ALLOWED_ORIGINS = ["http://193.168.49.170/"]
+# CORS_ALLOWED_ORIGINS = ["https://ssmart.uz/"]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
