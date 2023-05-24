@@ -8,37 +8,26 @@ import "@coreui/coreui/dist/css/coreui.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { Hero } from "./components/hero/hero";
-import { Vitrina } from "./components/vitrina/vitrina";
-import { Products } from "./components/products/products";
-import { Service } from "./components/service/service";
-import { Footer } from "./components/footer/footer";
 import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "./pages/home";
-import { Dealers } from "./pages/dealers";
-import { WarrantyComponent } from "./components/warranty/warranty";
 import { Warranty } from "./pages/warranty-service";
 import { AboutUs } from "./pages/about-us";
+import { LanguageProvider } from "./components/context/language";
 function App() {
 	return (
-		<div className="App">
-			<BrowserRouter>
-				<Header />
-				{/* <Hero /> */}
-				{/* <Vitrina /> */}
-				{/* <Products /> */}
-				{/* <Service /> */}
-				{/* <WarrantyComponent /> */}
-				{/* <Footer /> */}
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/about-us" element={<AboutUs />} />
-					{/* <Route path="/dealers" element={<Dealers />} />
-					<Route path="/products" element={<Home />} /> */}
-					<Route path="/service" element={<Warranty />} />
-				</Routes>
-			</BrowserRouter>
-			{/* <CCarousel controls indicators dark>
+		<LanguageProvider>
+			<div className="App">
+				<BrowserRouter>
+					<div className="content">
+						<Header />
+						<Routes>
+							<Route path="/" element={<Home />} />
+							<Route path="/about-us" element={<AboutUs />} />
+							<Route path="/service" element={<Warranty />} />
+						</Routes>
+					</div>
+				</BrowserRouter>
+				{/* <CCarousel controls indicators dark>
 				{pictures.map((picture) => (
 					<CCarouselItem key={picture.id}>
 						<CImage
@@ -53,8 +42,9 @@ function App() {
 					</CCarouselItem>
 				))}
 			</CCarousel> */}
-			;
-		</div>
+				;
+			</div>
+		</LanguageProvider>
 	);
 }
 

@@ -1,8 +1,12 @@
 import { styles } from "./service.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { LanguageContext } from "../context/language";
+import { words } from "../words";
 export function Service() {
 	const [partners, setPartners] = useState([]);
 	const [banner, setBanner] = useState("");
+
+	const { language } = useContext(LanguageContext);
 
 	async function getPartners() {
 		const response = await fetch("http://193.168.49.170/api/partners/");
@@ -47,16 +51,20 @@ export function Service() {
 					}}
 				></div>
 			</div>
-			<h1 className="service-heading">Гарантия и Сервис</h1>
+			<h1 className="service-heading">{words[language]["service_heading"]}</h1>
 			<div className="service__container">
 				<div className="service__container-left">
-					<span className="left-title">СЕРВИС</span>
+					<span className="left-title">
+						{words[language]["service_left_title"]}
+					</span>
 					<div className="left-bottom">
 						<img src="./images/map-128.png" alt="" />
 						<div className="service-left-bottom-text">
-							<span className="service-left-bottom-title">Адреса</span>
+							<span className="service-left-bottom-title">
+								{words[language]["addresses"]}
+							</span>
 							<a className="service-left-bottom-link" href="">
-								Сервис центров
+								{words[language]["service_points"]}
 							</a>
 						</div>
 					</div>
@@ -64,21 +72,25 @@ export function Service() {
 				<div className="service__container-right">
 					<div className="service-right-top">
 						<div className="service-right-top-text">
-							<span className="service-right-top-title">УСЛОВИЯ ГАРАНТИИ</span>
+							<span className="service-right-top-title">
+								{words[language]["warranty_conditions"]}
+							</span>
 							<a className="service-right-top-link" href="">
-								Узнать подробнее
+								{words[language]["warranty_text"]}
 							</a>
 						</div>
 					</div>
 					<div className="service-right-bottom">
 						<a href="" className="service-right-bottom-title">
-							ГДЕ КУПИТЬ ?
+							{words[language]["where_to_buy"]}
 						</a>
 					</div>
 				</div>
 			</div>
 			<div className="partners">
-				<h2 className="partners__heading">Партнеры</h2>
+				<h2 className="partners__heading">
+					{words[language]["partners_heading"]}
+				</h2>
 				<div className="partners__container">
 					{partners.map((partner) => (
 						<div

@@ -165,3 +165,43 @@
 		background-size: cover !important;
 	}
 } */
+
+@media screen and (max-width: 600px) {
+	.service__container-left {
+		width: 350px;
+		height: 220px;
+	}
+
+	.left-bottom {
+		margin-top: 25px;
+	}
+
+	.left-bottom img {
+		width: 80px;
+	}
+
+	.left-title {
+		font-size: 22px;
+	}
+
+	.service-left-bottom-text,
+	.service-right-top-text {
+		font-size: 22px;
+	}
+
+	.service-right-top,
+	.service-right-bottom {
+		width: 350px;
+	}
+
+	.service-right-top-title,
+	.service-right-bottom-title {
+		font-size: 24px;
+	}
+
+	.service__container-right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

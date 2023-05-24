@@ -1,5 +1,7 @@
 import { styles } from "./products.css";
-
+import { useEffect, useState, useContext } from "react";
+import { LanguageContext } from "../context/language";
+import { words } from "../words";
 export function ProductsContainer({
 	title,
 	price = 0,
@@ -8,6 +10,8 @@ export function ProductsContainer({
 	character,
 	description,
 }) {
+	const { language } = useContext(LanguageContext);
+
 	return (
 		<div className="products__container">
 			<div className="products__container-main">
@@ -24,8 +28,10 @@ export function ProductsContainer({
 					alt="product"
 				/> */}
 				<div className="container-main-bottom">
-					<span className="main-bottom-price">{price} Сум</span>
-					<button className="btn-primary">Купить</button>
+					<span className="main-bottom-price">
+						{price} {words[language]["currency"]}
+					</span>
+					<button className="btn-primary">{words[language]["buy"]}</button>
 				</div>
 			</div>
 			<div className="products__container-left">
@@ -41,7 +47,7 @@ export function ProductsContainer({
 						}}
 						className="btn-primary"
 					>
-						Подробнее
+						{words[language]["more"]}
 					</button>
 					<div
 						className="right-top-image"

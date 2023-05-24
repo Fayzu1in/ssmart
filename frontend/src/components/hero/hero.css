@@ -118,8 +118,6 @@
 	.hero__logos {
 		bottom: -50px;
 	}
-}
-@media screen and (max-width: 900px) {
 	.rectangle,
 	.rectangle__title {
 		display: none;

@@ -76,8 +76,8 @@ a.btn {
 }
 
 .globe {
-	height: 32px;
-	width: 32px;
+	/* height: 32px; */
+	width: 24px;
 	cursor: pointer;
 }
 
@@ -99,7 +99,7 @@ a.btn {
 	border-bottom-right-radius: 17px;
 	position: absolute;
 	bottom: -106px;
-	left: -4px;
+	left: -8px;
 }
 
 .header__language.active {

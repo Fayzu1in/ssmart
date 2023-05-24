@@ -1,9 +1,13 @@
 import { styles } from "./products.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { ProductsContainer } from "./products-container";
+import { words } from "../words";
+import { LanguageContext } from "../context/language";
 
 export function Products() {
 	const [products, setProducts] = useState([]);
+
+	const { language } = useContext(LanguageContext);
 
 	async function getProducts() {
 		const response = await fetch("http://193.168.49.170/api/products/");
@@ -32,9 +36,11 @@ export function Products() {
 						alt=""
 					/>
 					<span className="os-text">
-						ОПЕРАЦИОННАЯ СИСТЕМА И МАГАЗИН ПРИЛОЖЕНИЙ
+						{words[language]["os_title"]}
 						<br />
-						<span className="os-text-light">ОТ КОМПАНИИ LG</span>
+						<span className="os-text-light">
+							{words[language]["os_description"]}
+						</span>
 					</span>
 				</div>
 				<img className="product-img" src="./images/os.jpeg" alt="" />
@@ -45,7 +51,7 @@ export function Products() {
 				alt=""
 			/>
 			<h1 id="products__heading" className="products__heading">
-				Продукция
+				{words[language]["products_heading"]}
 			</h1>
 			{products.map((product) => (
 				<ProductsContainer

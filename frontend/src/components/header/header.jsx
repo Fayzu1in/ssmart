@@ -1,9 +1,13 @@
+import { words } from "../words";
+import { LanguageContext } from "../context/language";
 import styles from "./header.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createContext, useContext } from "react";
 export { Header };
 
 function Header() {
-	const [language, setLanguage] = useState("ru");
+	// const [language, setLanguage] = useState("ru");
+
+	const { language, changeLanguage } = useContext(LanguageContext);
 
 	function LanguageCall(event) {
 		console.log(event.target);
@@ -20,23 +24,25 @@ function Header() {
 			en.classList.add("active");
 			ru.classList.remove("active");
 			uz.classList.remove("active");
-			setLanguage("en");
+			changeLanguage("en");
 		} else if (lang === "ru") {
 			en.classList.remove("active");
 			ru.classList.add("active");
 			uz.classList.remove("active");
-			setLanguage("ru");
+			changeLanguage("ru");
 		} else if (lang === "uz") {
 			en.classList.remove("active");
 			ru.classList.remove("active");
 			uz.classList.add("active");
-			setLanguage("uz");
+			changeLanguage("uz");
 		}
 	};
 
 	useEffect(() => {
-		console.log(language);
+		localStorage.setItem("language", language);
+		changeLanguage(language);
 	}, [language]);
+
 	return (
 		<header className="header__main">
 			<div className="header__left">
@@ -47,23 +53,28 @@ function Header() {
 				</div>
 				<nav className="header__main__nav">
 					<ul className="header__main__nav__list">
+						{/* <li className="header__main__nav__list__item">
+							<a href="about-us">{words[language]["about"]}</a>
+						</li> */}
 						<li className="header__main__nav__list__item">
-							<a href="about-us">О компании</a>
+							<a href="http://localhost:3000#vitrina">
+								{words[language]["dealers"]}
+							</a>
 						</li>
 						<li className="header__main__nav__list__item">
-							<a href="http://localhost:3000#vitrina">Дилерам</a>
+							<a href="http://localhost:3000#products__heading">
+								{words[language]["products"]}
+							</a>
 						</li>
 						<li className="header__main__nav__list__item">
-							<a href="http://localhost:3000#products__heading">Продукция</a>
-						</li>
-						<li className="header__main__nav__list__item">
-							<a href="/service">Гарантия/Сервис</a>
+							<a href="/service">{words[language]["warranty"]}</a>
 						</li>
 						<li
 							style={{
 								position: "relative",
 								display: "flex",
 								flexDirection: "column",
+								justifyContent: "center",
 							}}
 						>
 							<img
@@ -108,7 +119,7 @@ function Header() {
 			</div>
 			<div className="header__main__user not">
 				<a href="" className="btn">
-					Поддержка
+					{words[language]["support"]}
 				</a>
 				<a href="" className="btn">
 					<img width={"24px"} src="./images/basket(2).png" alt="" />

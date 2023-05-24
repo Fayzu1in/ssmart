@@ -1,6 +1,11 @@
 import styles from "./vitrina.css";
+import { useContext } from "react";
+import { LanguageContext } from "../context/language";
+import { words } from "../words";
 
 export function Vitrina() {
+	const { language } = useContext(LanguageContext);
+
 	return (
 		<section className="vitrina" id="vitrina">
 			<div className="vitrina__left-section">
@@ -13,7 +18,7 @@ export function Vitrina() {
 								fontSize: "38px",
 							}}
 						>
-							Smart TV <span style={{ fontWeight: "300" }}> на базе</span>
+							{words[language]["webos"]}
 						</span>
 						<img
 							style={{
@@ -35,10 +40,11 @@ export function Vitrina() {
 					</div>
 				</div>
 				<div className="vitrina__left-bottom">
-					<span className="left-bottom-title">ВСТРОЕННЫЕ СЕРВИСЫ</span>
+					<span className="left-bottom-title">
+						{words[language]["services_title"]}
+					</span>
 					<span className="left-bottom-description">
-						При первом включении доступ к ТВ каналам, Фильмам Сериалам и другому
-						контенту.
+						{words[language]["services_description"]}
 					</span>
 					<div className="left-bottom-logos">
 						<img className="allplay" src="./images/allplay.png" alt="" />
@@ -51,9 +57,10 @@ export function Vitrina() {
 					<div className="right-top-text">
 						<span className="right-top-title">Ultra HD 4K</span>
 						<span className="right-top-description">
-							Дисплей с яркими
+							{/* Дисплей с яркими */}
+							{words[language]["display_top"]}
 							<br />
-							Цветами
+							{words[language]["display_bottom"]}
 						</span>
 					</div>
 					<img
@@ -64,8 +71,13 @@ export function Vitrina() {
 				</div>
 				<div className="vitrina__right-center">
 					<div className="right-center-text">
-						<span className="right-center-title">БЕЗРАМОЧНЫЙ</span>
-						<span className="right-center-description">Дизайн корпуса</span>
+						<span className="right-center-title">
+							{words[language]["no_frame_top"]}
+						</span>
+						<span className="right-center-description">
+							{" "}
+							{words[language]["no_frame_bottom"]}
+						</span>
 						<img
 							className="right-center-image"
 							src="./images/ssmart-tv-5.png"
@@ -75,9 +87,11 @@ export function Vitrina() {
 				</div>
 				<div className="vitrina__right-bottom">
 					<div className="right-bottom-text">
-						<span className="right-bottom-title">НЕВЕРОЯТНЫЙ</span>
+						<span className="right-bottom-title">
+							{words[language]["dolby_title"]}
+						</span>
 						<span className="right-bottom-description">
-							Звук от Dolby Digital
+							{words[language]["dolby_description"]}
 						</span>
 						<img
 							className="right-bottom-image"

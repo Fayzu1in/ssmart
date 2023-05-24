@@ -1,6 +1,11 @@
+import { useEffect, createContext, useContext } from "react";
+import { words } from "../words";
 import styles from "./hero.css";
+import { LanguageContext } from "../context/language";
 
 export function Hero() {
+	const { language, changeLanguage } = useContext(LanguageContext);
+
 	return (
 		<>
 			<section>
@@ -56,7 +61,7 @@ export function Hero() {
 				</div>
 			</section>
 			<div className="rectangle"></div>
-			<span className="rectangle__title">НОВИНКА</span>
+			<span className="rectangle__title">{words[language]["new"]}</span>
 		</>
 	);
 }

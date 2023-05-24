@@ -5,7 +5,7 @@ import { AboutUsComponent } from "../components/about/about";
 export function AboutUs() {
 	return (
 		<>
-			<Header />
+			{/* <Header /> */}
 			<AboutUsComponent />
 			<Footer />
 		</>
