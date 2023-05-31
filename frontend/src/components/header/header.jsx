@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { words } from "../words";
 import { LanguageContext } from "../context/language";
 import styles from "./header.css";
@@ -53,13 +54,8 @@ function Header() {
 				</div>
 				<nav className="header__main__nav">
 					<ul className="header__main__nav__list">
-						{/* <li className="header__main__nav__list__item">
-							<a href="about-us">{words[language]["about"]}</a>
-						</li> */}
 						<li className="header__main__nav__list__item">
-							<a href="http://localhost:3000#vitrina">
-								{words[language]["dealers"]}
-							</a>
+							<a href="/request">{words[language]["dealers"]}</a>
 						</li>
 						<li className="header__main__nav__list__item">
 							<a href="http://localhost:3000#products__heading">
@@ -118,7 +114,7 @@ function Header() {
 				</nav>
 			</div>
 			<div className="header__main__user not">
-				<a href="" className="btn">
+				<a href="/support" className="btn">
 					{words[language]["support"]}
 				</a>
 				<a href="" className="btn">

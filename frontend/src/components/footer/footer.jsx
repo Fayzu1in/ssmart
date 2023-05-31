@@ -7,35 +7,31 @@ export function Footer() {
 				<ul className="footer__list">
 					<span className="footer__list-title">Поддержка</span>
 					<li className="footer__list-item">
-						<a href="">Поддержка Ssmart</a>
+						<a href="/support">Поддержка Ssmart</a>
 					</li>
 					<li className="footer__list-item">
-						<a href="">Где купить ?</a>
+						<a href="/where-to-buy">Где купить ?</a>
 					</li>
 					<li className="footer__list-item">
 						<a href="">Руководство пользователя</a>
 					</li>
 
 					<li className="footer__list-item">
-						<a href="">Условия Гарантии</a>
+						<a href="/service">Условия Гарантии</a>
 					</li>
 
 					<li className="footer__list-item">
-						<a href="">Дилерам</a>
+						<a href="/request">Дилерам</a>
 					</li>
 				</ul>
 				<ul className="footer__list">
 					<span className="footer__list-title">О НАС</span>
 					<li className="footer__list-item">
-						<a href="">Ssmart</a>
-					</li>
-					<li className="footer__list-item">
-						<a href="">Команда</a>
+						<a href="/about-us">Ssmart</a>
 					</li>
 					<li className="footer__list-item">
 						<a href="">Производство</a>
 					</li>
-
 					<li className="footer__list-item">
 						<a href="">Политика конфиденциальности</a>
 					</li>
@@ -58,14 +54,14 @@ export function Footer() {
 						<a href="">Эл.почта</a>
 					</li>
 					<li className="footer__list-item">
-						<a href="">Колл-центр : +998 71 200 00 000</a>
+						<a href="tel:+998712209009">Колл-центр : +998 71 220 90 09</a>
 					</li>
 					<li className="footer__list-item">
 						<a href="">Часы работы : с 9:00 до 18:00 Карши</a>
 					</li>
 
 					<li className="footer__list-item">
-						<a href="">Онлайн поддержка</a>
+						<a href="/support">Онлайн поддержка</a>
 					</li>
 				</ul>
 			</div>
@@ -75,12 +71,25 @@ export function Footer() {
 				src="./images/logo.png"
 				alt=""
 				className="footer-rectangle-title main__logo"
+				style={{
+					height: "60px",
+				}}
 			/>
 			<div className="footer__social">
 				<span className="footer__news-title">Новости Ssmart</span>
 				<div className="footer__news-logos">
-					<a href="">instagram</a>
-					<a href="">telegram</a>
+					<a href="">
+						<div className="instagram">
+							<img src="./images/instagram.png" alt="" />
+						</div>
+						instagram
+					</a>
+					<a href="">
+						<div className="telegram">
+							<img src="./images/telegram.png" alt="" />
+						</div>
+						telegram
+					</a>
 				</div>
 			</div>
 			<hr

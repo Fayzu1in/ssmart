@@ -74,6 +74,9 @@
 	background-color: #e2e2e2;
 }
 
+.right-logos {
+}
+
 @media screen and (max-width: 1000px) {
 	.about__smart {
 		flex-direction: column;

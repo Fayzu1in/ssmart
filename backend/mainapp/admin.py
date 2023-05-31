@@ -43,3 +43,8 @@ class WarrantyDataAdmin(admin.ModelAdmin):
     list_display = ['series', 'created']
 
 
+
+
+@admin.register(DealerRequest)
+class DealerRequestAdmin(admin.ModelAdmin):
+    list_display = ['name', 'created']

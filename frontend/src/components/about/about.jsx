@@ -84,6 +84,202 @@ export function AboutUsComponent() {
 			<div className="about__text">
 				<span>ПРОИЗВОДСТВЕННАЯ МОЩНОСТЬ 100 000 ТЕЛЕВИЗОРОВ В ГОД</span>
 			</div>
+			<h1 className="main__title">ПРОИЗВОДСТВО</h1>
+			<div
+				className="about__smart"
+				style={{
+					backgroundColor: "#e2e2e2",
+					height: "145px",
+					fontSize: "20px",
+					height: "250px",
+				}}
+			>
+				<div
+					className="about__smart-left"
+					style={{
+						borderRight: "3px solid #000",
+						height: "205px",
+						padding: "unset",
+						textAlign: "center",
+					}}
+				>
+					<span>
+						ПОСТАВЩИКИ <br /> КОМПЛЕКТУЮЩИХ
+					</span>
+				</div>
+				<div
+					className="about__smart-right"
+					style={{
+						paddingRight: "15px",
+						paddingLeft: "15px",
+						textAlign: "center",
+						display: "flex",
+						justifyContent: "center",
+						width: "60%",
+						height: "250px",
+					}}
+				>
+					<div
+						className="right-logos"
+						style={{
+							display: "flex",
+							alignItems: "center",
+						}}
+					>
+						<img style={{ width: "102px" }} src="./images/lg.png" alt="" />
+						<img style={{ width: "141px" }} src="./images/hikeen.png" alt="" />
+						<img style={{ width: "141px" }} src="./images/tcl.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div className="about__text">
+				<span>
+					ВСЯ НАША ПРОДУКЦИЯ СОБРАННА ИЗ КАЧЕСТВЕННЫХ КОМПЛЕКТУЮЩИХ ОТ МИРОВЫХ
+					БРЕНДОВ ТЕХНОЛОГИЧЕСКОЙ ПРОМЫШЛЕННОСТИ.
+				</span>
+			</div>
+			<div
+				className="about__smart"
+				style={{
+					backgroundColor: "#e2e2e2",
+					height: "250px",
+					fontSize: "20px",
+				}}
+			>
+				<div
+					className="about__smart-left"
+					style={{
+						borderRight: "3px solid #000",
+						height: "205px",
+						padding: "unset",
+						textAlign: "center",
+					}}
+				>
+					<span>
+						ОПЕРАЦИОНЫЕ <br /> СИСТЕМЫ
+					</span>
+				</div>
+				<div
+					className="about__smart-right"
+					style={{
+						paddingRight: "15px",
+						paddingLeft: "15px",
+						textAlign: "center",
+						display: "flex",
+						justifyContent: "center",
+						width: "60%",
+					}}
+				>
+					<div
+						className="right-logos"
+						style={{
+							display: "flex",
+							alignItems: "center",
+						}}
+					></div>
+				</div>
+			</div>
+			<div className="about__text">
+				<span>
+					МЫ РАБОТАЕМ С РАЗНЫМИ ОПЕРАЦИОННЫМИ СИСТЕМАМИ ПРИ ПРОИЗВЕДСТВЕ
+					ТЕХНОЛОГИЧЕСКОЙ ПРОДУКЦИИ.
+				</span>
+			</div>
+			<div
+				className="about__smart"
+				style={{
+					backgroundColor: "#5e5e5e",
+					color: "#fff",
+					height: "250px",
+					fontSize: "20px",
+				}}
+			>
+				<div
+					className="about__smart-left"
+					style={{
+						borderRight: "3px solid #fff",
+						height: "205px",
+						padding: "unset",
+						textAlign: "center",
+					}}
+				>
+					<span>ТЕХНОЛОГИИ</span>
+				</div>
+				<div
+					className="about__smart-right"
+					style={{
+						paddingRight: "15px",
+						paddingLeft: "15px",
+						textAlign: "center",
+						display: "flex",
+						justifyContent: "center",
+						width: "60%",
+					}}
+				>
+					<div
+						className="right-logos"
+						style={{
+							display: "flex",
+							alignItems: "center",
+						}}
+					></div>
+				</div>
+			</div>
+			<div
+				className="about__text"
+				style={{
+					color: "#fff",
+					backgroundColor: "#5e5e5e",
+				}}
+			>
+				<span>
+					МЫ РАБОТАЕМ С РАЗНЫМИ ОПЕРАЦИОННЫМИ СИСТЕМАМИ ПРИ ПРОИЗВЕДСТВЕ
+					ТЕХНОЛОГИЧЕСКОЙ ПРОДУКЦИИ.
+				</span>
+			</div>
+			<div
+				className="about__smart"
+				style={{
+					backgroundColor: "#e2e2e2",
+					color: "#000",
+					height: "250px",
+					fontSize: "20px",
+				}}
+			>
+				<div
+					className="about__smart-left"
+					style={{
+						borderRight: "3px solid #000",
+						height: "205px",
+						padding: "unset",
+						textAlign: "center",
+					}}
+				>
+					<span>ПАРТНЕРЫ</span>
+				</div>
+				<div
+					className="about__smart-right"
+					style={{
+						paddingRight: "15px",
+						paddingLeft: "15px",
+						textAlign: "center",
+						display: "flex",
+						justifyContent: "center",
+						width: "60%",
+					}}
+				>
+					<div
+						className="right-logos"
+						style={{
+							display: "flex",
+							alignItems: "center",
+						}}
+					></div>
+				</div>
+			</div>
+			<div className="about__text">
+				<span> МЫ ПРОИЗВОДИМ ТЕЛЕВИЗОРЫ ДЛЯ МИРОВЫХ И OEM БРЕНДОВ</span>
+			</div>
 		</section>
 	);
 }

@@ -76,7 +76,7 @@ class Adverts(models.Model):
 
 
 class Warranty(models.Model):
-    series = models.CharField('Серия',max_length=255, unique=True)
+    series = models.CharField('Серия',max_length=255)
     talon = models.CharField('Талон',max_length=255)
     name = models.CharField("ФИО",max_length=255)
     phone = models.CharField("Номер",max_length=255)
@@ -108,3 +108,32 @@ class WarrantyData(models.Model):
 
     def __str__(self) -> str:
         return f'{self.series}: {self.created}'
+    
+
+
+
+class DealerRequest(models.Model):
+
+    sales_choices = (
+        ('Розница', 'Розница'),
+        ('Оптовые', 'Оптовые'),
+    )
+
+    name = models.CharField(("Наименование юридического лица"), max_length=255)
+    inn = models.CharField(("ИНН"), max_length=255)
+    city = models.CharField(("Город осуществления деятельности*"), max_length=100)
+    shops = models.IntegerField(("Кол-во магазинов"))
+    sales_type = models.CharField(("Тип продаж"), max_length=100, choices=sales_choices)
+    text = models.TextField(("Доп. инфо"))
+    created = models.DateTimeField(("Создан"), auto_now=False, auto_now_add=True)
+
+
+    class Meta:
+        verbose_name = ("DealerRequest")
+        verbose_name_plural = ("DealerRequests")
+
+    def __str__(self):
+        return self.name
+
+    # def get_absolute_url(self):
+    #     return reverse("DealerRequest_detail", kwargs={"pk": self.pk})

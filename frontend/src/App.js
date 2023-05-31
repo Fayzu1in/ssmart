@@ -13,6 +13,9 @@ import { Home } from "./pages/home";
 import { Warranty } from "./pages/warranty-service";
 import { AboutUs } from "./pages/about-us";
 import { LanguageProvider } from "./components/context/language";
+import { Support } from "./pages/support";
+import { Where } from "./components/where/where";
+import { Request } from "./components/request/request";
 function App() {
 	return (
 		<LanguageProvider>
@@ -24,6 +27,9 @@ function App() {
 							<Route path="/" element={<Home />} />
 							<Route path="/about-us" element={<AboutUs />} />
 							<Route path="/service" element={<Warranty />} />
+							<Route path="/support" element={<Support />} />
+							<Route path="/where-to-buy" element={<Where />} />
+							<Route path="/request" element={<Request />} />
 						</Routes>
 					</div>
 				</BrowserRouter>

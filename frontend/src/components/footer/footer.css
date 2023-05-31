@@ -78,6 +78,9 @@
 	text-decoration: none;
 	color: #fff;
 	font-size: 20px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 .copyright-text {
@@ -86,6 +89,20 @@
 	left: 10px;
 	color: #fff;
 	font-size: 16px;
+}
+
+.telegram,
+.instagram {
+	width: 60px;
+	background-color: #bf1d69;
+	display: flex;
+	justify-content: center;
+	border-radius: 10px;
+}
+
+.instagram img,
+.telegram img {
+	width: 45px;
 }
 
 @media screen and (max-width: 1200px) {

@@ -1,0 +1,133 @@
+import { useState, useEffect } from "react";
+import { Footer } from "../components/footer/footer";
+
+export function Support() {
+	return (
+		<>
+			<section className="support">
+				<h1
+					style={{
+						textAlign: "center",
+						marginBottom: "40px",
+					}}
+				>
+					Обслуживание и поддержка продукции Ssmart
+				</h1>
+				<div
+					className="about__text"
+					style={{
+						color: "#000",
+					}}
+				>
+					<p>
+						Получите ответы на свои вопросы о настройке продукта, использовании
+						и уходе, ремонте и техническом обслуживании. Мы можем помочь.
+					</p>
+				</div>
+				<div className="support__center">
+					<div className="support__center-box">
+						<span> Поговорите с нами</span>
+						<button
+							className="btn-primary"
+							style={{
+								height: "85px",
+							}}
+						>
+							Открыть чат
+						</button>
+						<span>Чат поддержки 24/7</span>
+					</div>
+					<div className="support__center-box">
+						<span> Свяжитесь с нами по Электронной почте</span>
+						<img
+							style={{
+								width: "130px",
+							}}
+							src="./images/email.png"
+							alt=""
+						/>
+						<span>support@ssmart.uz</span>
+					</div>
+					<div className="support__center-box">
+						<span> Свяжитесь с нами в социальных сетях</span>
+						<a
+							href=""
+							style={{
+								display: "flex",
+								alignItems: "center",
+								gap: "20px",
+							}}
+						>
+							<div
+								className="instagram"
+								style={{
+									width: "90px",
+								}}
+							>
+								<img
+									style={{
+										width: "90px",
+									}}
+									src="./images/instagram.png"
+									alt=""
+								/>
+							</div>
+							@ssmart_official
+						</a>
+						<a
+							href=""
+							style={{
+								display: "flex",
+								alignItems: "center",
+								gap: "20px",
+							}}
+						>
+							<div
+								className="telegram"
+								style={{
+									width: "90px",
+								}}
+							>
+								<img
+									style={{
+										width: "90px",
+									}}
+									src="./images/telegram.png"
+									alt=""
+								/>
+							</div>
+							@ssmart_official
+						</a>
+					</div>
+					<div
+						className="support__center-box"
+						style={{
+							backgroundColor: "#bf1d69",
+							color: "#fff",
+						}}
+					>
+						<span> Позвоните в наш колл-центр</span>
+						<img
+							style={{
+								width: "90px",
+							}}
+							src="./images/phone.png"
+							alt=""
+						/>
+						<a style={{ color: "#fff" }} href="tel:+998712209009">
+							+998 71 220 90 09
+						</a>
+						<span
+							style={{
+								fontSize: "18px",
+							}}
+						>
+							Звонок внутри Республики Узбекистан бесплатный
+						</span>
+					</div>
+				</div>
+			</section>
+			<Footer />
+		</>
+	);
+}
