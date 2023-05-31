@@ -96,7 +96,7 @@ class Warranty(models.Model):
     
 
 class WarrantyData(models.Model):
-    series = models.CharField("Серия",max_length=255, unique=True)
+    series = models.CharField("Серия",max_length=255)
     created = models.DateTimeField("Создан",auto_now_add=True)
     updated = models.DateTimeField("Изменен",auto_now=True)
 
