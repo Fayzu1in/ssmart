@@ -36,7 +36,13 @@ export function ProductsContainer({
 						marginTop: "20px",
 					}}
 				>
-					<img src={os_type} className="system"></img>
+					<img
+						style={{
+							width: "200px",
+						}}
+						src={os_type}
+						className="system"
+					></img>
 					{name}
 				</div>
 				<div
