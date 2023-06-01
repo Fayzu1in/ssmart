@@ -25,7 +25,8 @@ export function Where() {
 					</p>
 				</div>
 				<div className="support__center">
-					<div
+					<a
+						href="https://elmakon.uz/"
 						className="support__center-box"
 						style={{
 							justifyContent: "space-between",
@@ -34,9 +35,10 @@ export function Where() {
 						<div className="center-box-logo elmakon"></div>
 						{/* <img src="./images/elmakon.png" alt="" /> */}
 						<button className="btn-primary gray">Перейти на сайт</button>
-					</div>
+					</a>
 
-					<div
+					<a
+						href="https://www.goodzone.uz/ru"
 						className="support__center-box"
 						style={{
 							justifyContent: "space-between",
@@ -45,9 +47,10 @@ export function Where() {
 						<div className="center-box-logo goodzone"></div>
 						{/* <img src="./images/elmakon.png" alt="" /> */}
 						<button className="btn-primary gray">Перейти на сайт</button>
-					</div>
+					</a>
 
-					<div
+					<a
+						href="https://idea.uz/"
 						className="support__center-box"
 						style={{
 							justifyContent: "space-between",
@@ -64,9 +67,10 @@ export function Where() {
 						>
 							Скоро
 						</button>
-					</div>
+					</a>
 
-					<div
+					<a
+						href="https://uzum.uz/" 
 						className="support__center-box"
 						style={{
 							justifyContent: "space-between",
@@ -75,7 +79,7 @@ export function Where() {
 						<div className="center-box-logo uzum"></div>
 						{/* <img src="./images/elmakon.png" alt="" /> */}
 						<button className="btn-primary gray">Перейти на сайт</button>
-					</div>
+					</a>
 				</div>
 				<div
 					className="about__text"

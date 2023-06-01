@@ -101,34 +101,34 @@ export function ProductsContainer({
 						}}
 					>
 						<span className="display" style={{}}>
-							<b>Экран - {display}</b>
+							<b>Экран</b> - {display}
 						</span>
 						<span className="display" style={{}}>
-							<b>Разрешения - {resolution}</b>
+							<b>Разрешения</b> - {resolution}
 						</span>
 						<span className="display" style={{}}>
-							<b>Яркость - {brightness}</b>
+							<b>Яркость</b> - {brightness}
 						</span>
 						<span className="display" style={{}}>
-							<b>Контраст - {contrast}</b>
+							<b>Контраст</b> - {contrast}
 						</span>
 						<span className="display" style={{}}>
-							<b>Звук - {voice}</b>
+							<b>Звук</b> - {voice}
 						</span>
 						<span className="display" style={{}}>
-							<b>Блок Питания - {ac}</b>
+							<b>Блок Питания</b> - {ac}
 						</span>
 						<span className="display" style={{}}>
-							<b>Wi-Fi/Bluetooth - {wifi}</b>
+							<b>Wi-Fi/Bluetooth</b> - {wifi}
 						</span>
 						<span className="display" style={{}}>
-							<b>RAM/DDR - {ram}</b>
+							<b>RAM/DDR</b> - {ram}
 						</span>
 						<span className="display" style={{}}>
-							<b>Голосовое управление - {voice_control}</b>
+							<b>Голосовое управление</b> - {voice_control}
 						</span>
 						<span className="display" style={{}}>
-							<b>Технологии - {tech}</b>
+							<b>Технологии</b> - {tech}
 						</span>
 					</div>
 				</div>
