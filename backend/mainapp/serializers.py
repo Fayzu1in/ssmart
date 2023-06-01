@@ -9,9 +9,9 @@ class ProductSerializer(serializers.ModelSerializer):
     def get_os_type(self, obj):
         try:
             if obj.os_type == 'android':
-                return 'backend/static/img/android.png'
+                return 'api/pictures/products/android.png'
             else: 
-                return 'backend/static/img/webos.png'
+                return 'api/pictures/products/webos.png'
         except:
             pass
 
