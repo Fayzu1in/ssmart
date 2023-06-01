@@ -32,6 +32,7 @@ export function ProductsContainer({
 						display: "flex",
 						width: "100%",
 						justifyContent: "center",
+						alignItems: "center",
 						gap: "20px",
 						marginTop: "20px",
 					}}
