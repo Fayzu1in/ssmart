@@ -12,6 +12,7 @@ urlpatterns = [
     path('adverts/', AdvertsList.as_view(), name='adverts'),
     path('warranty/', WarrantyList.as_view(), name='warranty'),
     path('warrantydata/', WarrantyDataList.as_view(), name='warrantydata'),
+    path('dealers/', DealerRequestListView.as_view(),name='dealers' )
 ]
 
 

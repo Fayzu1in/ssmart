@@ -30,7 +30,7 @@ export function Footer() {
 						<a href="/about-us">Ssmart</a>
 					</li>
 					<li className="footer__list-item">
-						<a href="">Производство</a>
+						<a href="/about-us">Производство</a>
 					</li>
 					<li className="footer__list-item">
 						<a href="">Политика конфиденциальности</a>
@@ -51,7 +51,7 @@ export function Footer() {
 				<ul className="footer__list">
 					<span className="footer__list-title">СВЯЗАТЬСЯ С НАМИ</span>
 					<li className="footer__list-item">
-						<a href="">Эл.почта</a>
+						<a href="mailto: abc@example.com">Эл.почта</a>
 					</li>
 					<li className="footer__list-item">
 						<a href="tel:+998712209009">Колл-центр : +998 71 220 90 09</a>

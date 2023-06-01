@@ -5,7 +5,7 @@ from django.utils.safestring import mark_safe
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'status', 'price', 'created', 'updated')
+    list_display = ('name', 'price', 'created', 'updated')
 
 
 

@@ -37,7 +37,7 @@ export function Support() {
 						</button>
 						<span>Чат поддержки 24/7</span>
 					</div>
-					<div className="support__center-box">
+					<a href="mailto: abc@example.com" className="support__center-box">
 						<span> Свяжитесь с нами по Электронной почте</span>
 						<img
 							style={{
@@ -47,7 +47,7 @@ export function Support() {
 							alt=""
 						/>
 						<span>support@ssmart.uz</span>
-					</div>
+					</a>
 					<div className="support__center-box">
 						<span> Свяжитесь с нами в социальных сетях</span>
 						<a
@@ -99,7 +99,8 @@ export function Support() {
 							@ssmart_official
 						</a>
 					</div>
-					<div
+					<a
+						href="tel:+998712209009"
 						className="support__center-box"
 						style={{
 							backgroundColor: "#bf1d69",
@@ -114,9 +115,7 @@ export function Support() {
 							src="./images/phone.png"
 							alt=""
 						/>
-						<a style={{ color: "#fff" }} href="tel:+998712209009">
-							+998 71 220 90 09
-						</a>
+						<span style={{ color: "#fff" }}>+998 71 220 90 09</span>
 						<span
 							style={{
 								fontSize: "18px",
@@ -124,7 +123,7 @@ export function Support() {
 						>
 							Звонок внутри Республики Узбекистан бесплатный
 						</span>
-					</div>
+					</a>
 				</div>
 			</section>
 			<Footer />

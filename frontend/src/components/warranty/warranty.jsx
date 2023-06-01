@@ -19,7 +19,7 @@ export function WarrantyComponent() {
 	// const [seriesData, setSeriesData] = useState([]);
 	// async function getSeriesData() {
 	// 	try {
-	// 		const response = await fetch("http://127.0.0.1:8000/api/warrantydata/");
+	// 		const response = await fetch("https://ssmart.uz/api/warrantydata/");
 	// 		const data = await response.json();
 	// 		setSeriesData(data);
 	// 	} catch (error) {

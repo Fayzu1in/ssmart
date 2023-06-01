@@ -75,13 +75,13 @@ export function Service() {
 							<span className="service-right-top-title">
 								{words[language]["warranty_conditions"]}
 							</span>
-							<a className="service-right-top-link" href="">
+							<a className="service-right-top-link" href="/service">
 								{words[language]["warranty_text"]}
 							</a>
 						</div>
 					</div>
 					<div className="service-right-bottom">
-						<a href="" className="service-right-bottom-title">
+						<a href="/where-to-buy" className="service-right-bottom-title">
 							{words[language]["where_to_buy"]}
 						</a>
 					</div>

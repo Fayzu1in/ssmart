@@ -117,12 +117,12 @@ function Header() {
 				<a href="/support" className="btn">
 					{words[language]["support"]}
 				</a>
-				<a href="" className="btn">
+				{/* <a href="" className="btn">
 					<img width={"24px"} src="./images/basket(2).png" alt="" />
 				</a>
 				<a href="" className="btn">
 					<img width={"24px"} src="./images/user.png" alt="" />
-				</a>
+				</a> */}
 			</div>
 		</header>
 	);

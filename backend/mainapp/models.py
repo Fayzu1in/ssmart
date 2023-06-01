@@ -9,16 +9,27 @@ class Product(models.Model):
         ('new', 'New'),
     }
 
-    name = models.CharField(max_length=255)
-    image1 = models.ImageField('Картинка-1', upload_to='pictures/products')
-    image2 = models.ImageField('Картинка-2', upload_to='pictures/products', blank=True, null=True)
-    character = models.TextField('Характеристики', blank=True, null=True)
-    descripton = models.TextField('Описание', blank=True, null=True)
-    os = models.CharField('OS', max_length=255, blank=True, null=True)
-    os_info = models.TextField('OS', blank=True, null=True)
-    status = models.CharField('Статус', max_length=50, choices=status_choices, default='new')
-    price = models.CharField('Цена', max_length=255)
-    is_published = models.BooleanField('Опубликован', default=True)
+    os_choices = {
+        ('android', 'android'),
+        ('webos', 'webos')
+    }
+    name = models.CharField(("Название"), max_length=100)
+    picture = models.ImageField(("Картинка"), upload_to='pictures/products', height_field=None, width_field=None, max_length=None, null=True)
+    os_type = models.CharField(("Тип ОС"), max_length=100, choices=os_choices, blank=True)
+    is_new = models.BooleanField(("Новый"), default=True)
+    display = models.CharField(("Экран"), max_length=255,blank=True)
+    resolution = models.CharField(("Разрешение"), max_length=255, blank=True)
+    brightness = models.CharField(("Яркость"), max_length=255, blank=True)
+    contrast = models.CharField(("Контраст"), max_length=255, blank=True)
+    voice = models.CharField(("Звук"), max_length=255, blank=True)
+    ac = models.CharField(("Блок питания"), max_length=255, blank=True)
+    system = models.CharField(("Система"), max_length=255, blank=True)
+    wifi = models.CharField(("Wi-Fi/Bluetooth"), max_length=255, blank=True)
+    ram = models.CharField(("RAM/DDR"), max_length=255, blank=True)
+    voice_control = models.BooleanField(("Голосовое управление"), default=False)
+    tech = models.CharField(("Технологии"), max_length=255, blank=True)
+    price = models.CharField(("Цена"), max_length=100, blank=True)
+    is_published = models.BooleanField(("Опубликован"), default=False)
     created = models.DateTimeField('Создан', auto_now_add=True)
     updated = models.DateTimeField('Изменен',auto_now=True)
 
@@ -129,8 +140,8 @@ class DealerRequest(models.Model):
 
 
     class Meta:
-        verbose_name = ("DealerRequest")
-        verbose_name_plural = ("DealerRequests")
+        verbose_name = ("Заявка дилера")
+        verbose_name_plural = ("Заявки дилеров")
 
     def __str__(self):
         return self.name

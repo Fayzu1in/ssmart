@@ -16,6 +16,7 @@ import { LanguageProvider } from "./components/context/language";
 import { Support } from "./pages/support";
 import { Where } from "./components/where/where";
 import { Request } from "./components/request/request";
+import { Slider } from "./components/slider/slider";
 function App() {
 	return (
 		<LanguageProvider>
@@ -30,6 +31,7 @@ function App() {
 							<Route path="/support" element={<Support />} />
 							<Route path="/where-to-buy" element={<Where />} />
 							<Route path="/request" element={<Request />} />
+							<Route path="/slider" element={<Slider />} />
 						</Routes>
 					</div>
 				</BrowserRouter>

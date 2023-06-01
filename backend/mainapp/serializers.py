@@ -3,19 +3,40 @@ from .models import *
 
 
 class ProductSerializer(serializers.ModelSerializer):
+
+    os_type = serializers.SerializerMethodField()
+
+    def get_os_type(self, obj):
+        try:
+            if obj.os_type == 'android':
+                return 'backend/static/img/android.png'
+            else: 
+                return 'backend/static/img/webos.png'
+        except:
+            pass
+
     class Meta:
         model = Product
         fields = (
             'id', 
             'name', 
-            'image1',
-            'image2',
-            'character', 
-            'descripton',
-            'os',
-            'os_info',
-            'status', 
-            'price'
+            'picture',
+            'os_type',
+            'is_new', 
+            'display',
+            'resolution',
+            'brightness',
+            'contrast',
+            'voice',
+            'ac',
+            'system',
+            'wifi',
+            'ram',
+            'voice_control',
+            'tech',
+            'price',
+            'is_published',
+        
             )
         
 
@@ -68,3 +89,20 @@ class WarrantyDataSerializer(serializers.ModelSerializer):
             'id', 
             'series'
             )
+        
+
+
+
+class DealerRequestSerializer(serializers.ModelSerializer):
+
+
+    class Meta: 
+        model = DealerRequest
+        fields = (
+            'name', 
+            'inn',
+            'city',
+            'shops',
+            'sales_type',
+            'text'
+        )

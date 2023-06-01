@@ -124,11 +124,31 @@ export function AboutUsComponent() {
 						style={{
 							display: "flex",
 							alignItems: "center",
+							gap: "20px",
+							flexWrap: "wrap",
+							justifyContent: "center",
+							padding: "0 40px",
 						}}
 					>
-						<img style={{ width: "102px" }} src="./images/lg.png" alt="" />
-						<img style={{ width: "141px" }} src="./images/hikeen.png" alt="" />
-						<img style={{ width: "141px" }} src="./images/tcl.png" alt="" />
+						<img
+							style={{
+								width: "82px",
+								marginRight: "20px",
+							}}
+							src="./images/LG_2.png"
+							alt=""
+						/>
+						<img style={{ width: "110px" }} src="./images/heniken.png" alt="" />
+						<img style={{ width: "80px" }} src="./images/tcl.png" alt="" />
+						<br />
+						<img style={{ width: "70px" }} src="./images/boe.png" alt="" />
+						<img style={{ width: "120px" }} src="./images/cvte.png" alt="" />
+						<img
+							style={{ width: "120px" }}
+							src="./images/wead-logo.png"
+							alt=""
+						/>
+						<img style={{ width: "120px" }} src="./images/topnice.png" alt="" />
 					</div>
 				</div>
 			</div>
@@ -175,8 +195,19 @@ export function AboutUsComponent() {
 						style={{
 							display: "flex",
 							alignItems: "center",
+							gap: "40px",
+							flexWrap: "wrap",
+							justifyContent: "center",
+							padding: "0 50px",
 						}}
-					></div>
+					>
+						<img style={{ width: "110px" }} src="./images/android.png" alt="" />
+						<img style={{ width: "110px" }} src="./images/yandex.png" alt="" />
+						<img style={{ width: "110px" }} src="./images/webos-small.png" />
+						<img style={{ width: "80px" }} src="./images/images.png" alt="" />
+						<img style={{ width: "110px" }} src="./images/salut.png" alt="" />
+						<img style={{ width: "100px" }} src="./images/vidaa.webp" alt="" />
+					</div>
 				</div>
 			</div>
 			<div className="about__text">
@@ -221,8 +252,23 @@ export function AboutUsComponent() {
 						style={{
 							display: "flex",
 							alignItems: "center",
+							gap: "50px",
+							flexWrap: "wrap",
+							justifyContent: "center",
+							padding: "0 50px",
 						}}
-					></div>
+					>
+						<img style={{ width: "80px" }} src="./images/ips.png" alt="" />
+						<img style={{ width: "80px" }} src="./images/voice-assistant.png" />
+						<img
+							style={{ width: "80px" }}
+							src="./images/Dolby_Atmos_Logo.png"
+							alt=""
+						/>
+						<img style={{ width: "80px" }} src="./images/wifi.png" alt="" />
+						<img style={{ width: "80px" }} src="./images/blue.jpg" alt="" />
+						<img style={{ width: "80px" }} src="./images/quality.jpg" alt="" />
+					</div>
 				</div>
 			</div>
 			<div
@@ -232,10 +278,7 @@ export function AboutUsComponent() {
 					backgroundColor: "#5e5e5e",
 				}}
 			>
-				<span>
-					МЫ РАБОТАЕМ С РАЗНЫМИ ОПЕРАЦИОННЫМИ СИСТЕМАМИ ПРИ ПРОИЗВЕДСТВЕ
-					ТЕХНОЛОГИЧЕСКОЙ ПРОДУКЦИИ.
-				</span>
+				<span>НАША ПРОДУКЦИЯ ВКЛЮЧАЕТ В СЕБЯ ВСЕ ПЕРЕДОВЫЕ ТЕХНОЛОГИИ</span>
 			</div>
 			<div
 				className="about__smart"
@@ -274,7 +317,9 @@ export function AboutUsComponent() {
 							display: "flex",
 							alignItems: "center",
 						}}
-					></div>
+					>
+						<img style={{ width: "80px" }} src="./images/jvc.png" alt="" />
+					</div>
 				</div>
 			</div>
 			<div className="about__text">

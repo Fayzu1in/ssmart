@@ -13,7 +13,8 @@
 	justify-content: space-between;
 }
 
-.form-box textarea {
+.form-box textarea,
+.form-box select {
 	padding: 8px 12px;
 	outline: none;
 	border-radius: 15px;

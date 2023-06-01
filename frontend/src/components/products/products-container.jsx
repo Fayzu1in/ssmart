@@ -3,23 +3,46 @@ import { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../context/language";
 import { words } from "../words";
 export function ProductsContainer({
-	title,
-	price = 0,
-	image1,
-	image2,
-	character,
-	description,
+	name,
+	picture,
+	os_type,
+	is_new,
+	display,
+	resolution,
+	brightness,
+	contrast,
+	voice,
+	ac,
+	system,
+	wifi,
+	ram,
+	voice_control,
+	tech,
+	price,
+	is_published,
 }) {
 	const { language } = useContext(LanguageContext);
 
 	return (
 		<div className="products__container">
 			<div className="products__container-main">
-				<span className="container-main-title">{title}</span>
+				<div
+					className="container-main-title"
+					style={{
+						display: "flex",
+						width: "100%",
+						justifyContent: "center",
+						gap: "20px",
+						marginTop: "20px",
+					}}
+				>
+					<img src={os_type} className="system"></img>
+					{name}
+				</div>
 				<div
 					className="products__main-picture"
 					style={{
-						backgroundImage: `url(${image1})`,
+						backgroundImage: `url(${picture})`,
 					}}
 				></div>
 				{/* <img
@@ -37,8 +60,8 @@ export function ProductsContainer({
 			<div className="products__container-left">
 				<div className="vitrina__right-top product">
 					<div className="right-top-text product">
-						<span className="right-top-title product">{character}</span>
-						<span className="right-top-description product">{description}</span>
+						<span className="right-top-title product">{display}</span>
+						<span className="right-top-description product">{display}</span>
 					</div>
 					<button
 						style={{
@@ -52,7 +75,7 @@ export function ProductsContainer({
 					<div
 						className="right-top-image"
 						style={{
-							backgroundImage: `url(${image2})`,
+							backgroundImage: `url(${picture})`,
 						}}
 					></div>
 					{/* <img

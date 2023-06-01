@@ -84,3 +84,16 @@ class WarrantyDataList(generics.ListAPIView):
     #         serializer.save()
     #         return Response(serializer.data, status=status.HTTP_201_CREATED)
     #     return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+
+class DealerRequestListView(generics.ListAPIView):
+    queryset = DealerRequest.objects.all()
+    serializer_class = DealerRequestSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = DealerRequestSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
