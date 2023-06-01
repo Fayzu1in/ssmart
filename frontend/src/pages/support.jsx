@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Footer } from "../components/footer/footer";
 
 export function Support() {
+
+	
+
 	return (
 		<>
 			<section className="support">

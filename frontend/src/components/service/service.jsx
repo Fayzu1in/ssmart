@@ -95,21 +95,15 @@ export function Service() {
 					{partners.map((partner) => (
 						<div
 							style={{
-								backgroundColor: `${partner.background__color}` || "white",
+								backgroundColor: `${partner.background_color}` || "white",
 								backgroundImage: `url(${partner.image})`,
-								backgroundSize: "cover",
+								backgroundSize: "contain",
 								backgroundPosition: "center",
+								backgroundRepeat: "no-repeat",
 							}}
 							className="partners__container-item"
 							key={partner.id}
-						>
-							{/* <img
-								key={partner.id}
-								className="partners__image"
-								src={partner.image}
-								alt=""
-							/> */}
-						</div>
+						></div>
 					))}
 				</div>
 			</div>

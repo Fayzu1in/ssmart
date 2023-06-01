@@ -5,6 +5,8 @@ from .models import *
 class ProductSerializer(serializers.ModelSerializer):
 
     os_type = serializers.SerializerMethodField()
+    voice_control = serializers.SerializerMethodField()
+
 
     def get_os_type(self, obj):
         try:
@@ -14,6 +16,13 @@ class ProductSerializer(serializers.ModelSerializer):
                 return 'api/pictures/products/webos.png'
         except:
             pass
+
+    def get_voice_control(self, obj):
+        if obj.voice_control:
+            return 'Есть'
+        else:
+            return 'Нет'
+
 
     class Meta:
         model = Product
@@ -36,13 +45,20 @@ class ProductSerializer(serializers.ModelSerializer):
             'tech',
             'price',
             'is_published',
-        
             )
         
 
 
 
 class PartnersSerializer(serializers.ModelSerializer):
+
+    background_color = serializers.SerializerMethodField()
+
+
+    def get_background_color(self, obj):
+        return obj.background_color 
+    
+
     class Meta:
         model = Partners
         fields = (
@@ -52,7 +68,7 @@ class PartnersSerializer(serializers.ModelSerializer):
             'background_color',
             'info'
             )
-        
+    
 
 
 class AdvertsSerializer(serializers.ModelSerializer):
