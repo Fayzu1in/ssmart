@@ -1,5 +1,6 @@
 .service {
 	padding: 0;
+	margin-top: 750px;
 }
 
 .banner {
@@ -29,7 +30,6 @@
 	padding: 30px;
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
 	align-items: center;
 }
 
@@ -46,11 +46,6 @@
 	gap: 20px;
 	margin-top: 60px;
 }
-
-/* .left-bottom img {
-	width: 180px;
-	height: 70px;
-} */
 
 .service-left-bottom-text,
 .service-right-top-text {
@@ -152,19 +147,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* background-color: #5e5e5e; */
 }
 
 .partners__image {
 	width: 270px;
 	height: 120px;
 }
-/* 
-@media screen and (min-width: 1500px) {
-	.banner-image {
-		background-size: cover !important;
-	}
-} */
 
 @media screen and (max-width: 600px) {
 	.service__container-left {

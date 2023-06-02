@@ -2,6 +2,7 @@ import { styles } from "./products.css";
 import { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../context/language";
 import { words } from "../words";
+
 export function ProductsContainer({
 	name,
 	picture,
@@ -96,7 +97,7 @@ export function ProductsContainer({
 							display: "flex",
 							flexDirection: "column",
 							justifyContent: "center",
-							gap: "28px",
+							gap: "20px",
 							height: "607px",
 						}}
 					>
@@ -117,6 +118,9 @@ export function ProductsContainer({
 						</span>
 						<span className="display" style={{}}>
 							<b>Блок Питания</b> - {ac}
+						</span>
+						<span className="display" style={{}}>
+							<b>Система</b> - {system}
 						</span>
 						<span className="display" style={{}}>
 							<b>Wi-Fi/Bluetooth</b> - {wifi}

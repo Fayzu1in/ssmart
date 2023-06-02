@@ -16,14 +16,15 @@ import { LanguageProvider } from "./components/context/language";
 import { Support } from "./pages/support";
 import { Where } from "./components/where/where";
 import { Request } from "./components/request/request";
-import { Slider } from "./components/slider/slider";
+import { Slider } from "./components/slider/slider.jsx";
+import { AllProducts } from "./pages/allProducts";
 function App() {
 	return (
 		<LanguageProvider>
 			<div className="App">
 				<BrowserRouter>
 					<div className="content">
-						<Header />
+						<Header logo="../images/logo.png" globe="../images/globe(1).png" />
 						<Routes>
 							<Route path="/" element={<Home />} />
 							<Route path="/about-us" element={<AboutUs />} />
@@ -31,6 +32,7 @@ function App() {
 							<Route path="/support" element={<Support />} />
 							<Route path="/where-to-buy" element={<Where />} />
 							<Route path="/request" element={<Request />} />
+							<Route path="/products" element={<AllProducts />} />
 							<Route path="/slider" element={<Slider />} />
 						</Routes>
 					</div>

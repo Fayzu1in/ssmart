@@ -1,62 +1,94 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useContext } from "react";
+import "./slider.css";
+import { ProductsContainer } from "../products/products-container";
+import { words } from "../words";
+import { LanguageContext } from "../context/language";
 
-export function Slider() {
-	const [slideCount, setSlideCount] = useState(0);
-	const [slideWidth, setSlideWidth] = useState(0);
-	const [slideHeight, setSlideHeight] = useState(0);
-	const [sliderUlWidth, setSliderUlWidth] = useState(0);
-	const sliderRef = useRef(null);
+export const Slider = ({ products }) => {
+	const [activeIndex, setActiveIndex] = useState(0);
+	const { language } = useContext(LanguageContext);
 
-	useEffect(() => {
-		const updateSliderDimensions = () => {
-			const slideElements = sliderRef.current.querySelectorAll("#slider ul li");
-			if (slideElements.length === 0) {
-				return; // No slide elements found, do nothing
-			}
-
-			const slideWidth = slideElements[0].offsetWidth;
-			const slideHeight = slideElements[0].offsetHeight;
-			const sliderUlWidth = slideElements.length * slideWidth;
-
-			setSlideCount(slideElements.length);
-			setSlideWidth(slideWidth);
-			setSlideHeight(slideHeight);
-			setSliderUlWidth(sliderUlWidth);
-		};
-
-		updateSliderDimensions();
-		window.addEventListener("resize", updateSliderDimensions);
-
-		return () => {
-			window.removeEventListener("resize", updateSliderDimensions);
-		};
-	}, []);
-
-	const moveLeft = () => {
-		// Implement the moveLeft logic using React state and CSS classes
+	const handleNextSlide = () => {
+		setActiveIndex((prevIndex) =>
+			prevIndex === products.length - 1 ? 0 : prevIndex + 1
+		);
 	};
 
-	const moveRight = () => {
-		// Implement the moveRight logic using React state and CSS classes
+	const handlePrevSlide = () => {
+		setActiveIndex((prevIndex) =>
+			prevIndex === 0 ? products.length - 1 : prevIndex - 1
+		);
 	};
 
 	return (
-		<div
-			id="slider"
-			style={{ width: slideWidth, height: slideHeight }}
-			ref={sliderRef}
-		>
-			<ul style={{ width: sliderUlWidth, marginLeft: -slideWidth }}>
-				{/* Render your slide elements here */}
-			</ul>
-			<a className="control_prev" onClick={moveLeft}>
-				Previous
-			</a>
-			<a className="control_next" onClick={moveRight}>
-				Next
-			</a>
+		<div>
+			<div className="slider-container">
+				<div className="card-slider">
+					{products.map((product, index) => (
+						<div
+							key={index}
+							className={`card ${index === activeIndex ? "active" : ""} ${
+								index === activeIndex - 1 ||
+								(index === 0 && activeIndex === products.length - 1)
+									? "prev"
+									: ""
+							} ${
+								index === activeIndex + 1 ||
+								(index === products.length - 1 && activeIndex === 0)
+									? "next"
+									: ""
+							}`}
+						>
+							<ProductsContainer
+								name={product.name}
+								picture={product.picture}
+								os_type={product.os_type}
+								is_new={product.is_new}
+								display={product.display}
+								resolution={product.resolution}
+								brightness={product.brightness}
+								contrast={product.contrast}
+								voice={product.voice}
+								ac={product.ac}
+								system={product.system}
+								wifi={product.wifi}
+								ram={product.ram}
+								voice_control={product.voice_control}
+								tech={product.tech}
+								price={product.price}
+								is_published={product.is_published}
+								key={product.id}
+							/>
+						</div>
+					))}
+				</div>
+			</div>
+			<button
+				style={{
+					position: "absolute",
+					left: "70px",
+					marginTop: "325px",
+					padding: "8px 12px",
+				}}
+				className="arrow-btn prev"
+				onClick={handlePrevSlide}
+			>
+				prev
+			</button>
+			<button
+				style={{
+					position: "absolute",
+					right: "70px",
+					marginTop: "325px",
+					padding: "8px 12px",
+				}}
+				className="arrow-btn next"
+				onClick={handleNextSlide}
+			>
+				next
+			</button>
 		</div>
 	);
-}
+};
 
 export default Slider;

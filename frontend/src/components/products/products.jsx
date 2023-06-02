@@ -3,6 +3,7 @@ import { useEffect, useState, useContext } from "react";
 import { ProductsContainer } from "./products-container";
 import { words } from "../words";
 import { LanguageContext } from "../context/language";
+import { Slider } from "../slider/slider.jsx";
 
 export function Products() {
 	const [products, setProducts] = useState([]);
@@ -53,7 +54,8 @@ export function Products() {
 			<h1 id="products__heading" className="products__heading">
 				{words[language]["products_heading"]}
 			</h1>
-			{products.map((product) => (
+			<Slider products={products} />
+			{/* {products.map((product) => (
 				<ProductsContainer
 					name={product.name}
 					picture={product.picture}
@@ -74,7 +76,7 @@ export function Products() {
 					is_published={product.is_published}
 					key={product.id}
 				/>
-			))}
+			))} */}
 		</section>
 	);
 }

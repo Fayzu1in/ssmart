@@ -45,6 +45,7 @@ html {
 body {
 	font-family: "Jost", sans-serif;
 	font-weight: normal;
+	overflow-x: hidden;
 }
 
 .webos-logo {
@@ -57,3 +58,4 @@ body {
 		overflow: hidden;
 	}
 }
+

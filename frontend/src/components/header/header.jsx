@@ -5,9 +5,8 @@ import styles from "./header.css";
 import React, { useEffect, useState, createContext, useContext } from "react";
 export { Header };
 
-function Header() {
+function Header(logo, globe) {
 	// const [language, setLanguage] = useState("ru");
-
 	const { language, changeLanguage } = useContext(LanguageContext);
 
 	function LanguageCall(event) {
@@ -15,7 +14,6 @@ function Header() {
 		let header__language = document.querySelector(".header__language");
 		header__language.classList.toggle("active");
 	}
-
 	const HandleClick = (e, lang) => {
 		// console.log(e.target.classList.toggle("active"));
 		let en = document.getElementById("en");
@@ -49,7 +47,7 @@ function Header() {
 			<div className="header__left">
 				<div className="header__main__logo">
 					<a href="/">
-						<img className="main__logo" src="./images/logo.png" alt="" />
+						<img className="main__logo" src={logo.logo} alt="" />
 					</a>
 				</div>
 				<nav className="header__main__nav">
@@ -58,9 +56,7 @@ function Header() {
 							<a href="/request">{words[language]["dealers"]}</a>
 						</li>
 						<li className="header__main__nav__list__item">
-							<a href="http://localhost:3000#products__heading">
-								{words[language]["products"]}
-							</a>
+							<a href="/products">{words[language]["products"]}</a>
 						</li>
 						<li className="header__main__nav__list__item">
 							<a href="/service">{words[language]["warranty"]}</a>
@@ -78,7 +74,7 @@ function Header() {
 									margin: "0 auto 0 auto",
 								}}
 								className="globe"
-								src="./images/globe(1).png"
+								src={logo.globe}
 								alt=""
 								id="globe"
 								onClick={LanguageCall}
