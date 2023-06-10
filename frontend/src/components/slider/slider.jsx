@@ -27,6 +27,9 @@ export const Slider = ({ products }) => {
 					{products.map((product, index) => (
 						<div
 							key={index}
+							style={{
+								border: "none",
+							}}
 							className={`card ${index === activeIndex ? "active" : ""} ${
 								index === activeIndex - 1 ||
 								(index === 0 && activeIndex === products.length - 1)
@@ -63,30 +66,58 @@ export const Slider = ({ products }) => {
 					))}
 				</div>
 			</div>
-			<button
+			{/* <button
 				style={{
 					position: "absolute",
 					left: "70px",
-					marginTop: "325px",
+					marginTop: "265px",
 					padding: "8px 12px",
 				}}
 				className="arrow-btn prev"
 				onClick={handlePrevSlide}
 			>
 				prev
-			</button>
-			<button
+			</button> */}
+			<img
+				src="./images/previous.png"
+				alt=""
+				style={{
+					position: "absolute",
+					left: "10%",
+					marginTop: "265px",
+					padding: "8px 12px",
+					cursor: "pointer",
+					width: "64px",
+				}}
+				className="arrow-btn prev"
+				onClick={handlePrevSlide}
+			/>
+			{/* <button
 				style={{
 					position: "absolute",
 					right: "70px",
-					marginTop: "325px",
+					marginTop: "265px",
 					padding: "8px 12px",
 				}}
 				className="arrow-btn next"
 				onClick={handleNextSlide}
 			>
 				next
-			</button>
+			</button> */}
+			<img
+				src="./images/next.png"
+				alt=""
+				style={{
+					position: "absolute",
+					right: "10%",
+					marginTop: "265px",
+					padding: "8px 12px",
+					cursor: "pointer",
+					width: "64px",
+				}}
+				className="arrow-btn prev"
+				onClick={handleNextSlide}
+			/>
 		</div>
 	);
 };

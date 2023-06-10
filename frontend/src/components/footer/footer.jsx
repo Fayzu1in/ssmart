@@ -1,11 +1,18 @@
 import { styles } from "./footer.css";
+import { useContext } from "react";
+import { LanguageContext } from "../context/language";
+import { words, footer } from "../words";
 
 export function Footer() {
+	const { language, changeLanguage } = useContext(LanguageContext);
+
 	return (
 		<footer className="foot">
 			<div className="footer__container">
 				<ul className="footer__list">
-					<span className="footer__list-title">Поддержка</span>
+					<span className="footer__list-title">
+						{footer[language]["support"]}
+					</span>
 					<li className="footer__list-item">
 						<a href="/support">Поддержка Ssmart</a>
 					</li>
@@ -25,7 +32,9 @@ export function Footer() {
 					</li>
 				</ul>
 				<ul className="footer__list">
-					<span className="footer__list-title">О НАС</span>
+					<span className="footer__list-title">
+						{footer[language]["about"]}
+					</span>
 					<li className="footer__list-item">
 						<a href="/about-us">Ssmart</a>
 					</li>
@@ -37,7 +46,9 @@ export function Footer() {
 					</li>
 				</ul>
 				<ul className="footer__list">
-					<span className="footer__list-title">ПРОДУКЦИЯ</span>
+					<span className="footer__list-title">
+						{footer[language]["products"]}
+					</span>
 					<li className="footer__list-item">
 						<a href="">Все товары</a>
 					</li>
@@ -49,7 +60,9 @@ export function Footer() {
 					</li>
 				</ul>
 				<ul className="footer__list">
-					<span className="footer__list-title">СВЯЗАТЬСЯ С НАМИ</span>
+					<span className="footer__list-title">
+						{footer[language]["contact"]}
+					</span>
 					<li className="footer__list-item">
 						<a href="mailto: abc@example.com">Эл.почта</a>
 					</li>

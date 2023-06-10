@@ -316,9 +316,24 @@ export function AboutUsComponent() {
 						style={{
 							display: "flex",
 							alignItems: "center",
+							flexWrap: "wrap",
+							justifyContent: "center",
 						}}
 					>
 						<img style={{ width: "80px" }} src="./images/jvc.png" alt="" />
+						<img style={{ width: "200px" }} src="./images/rebus.png" alt="" />
+						<img style={{ width: "115px" }} src="./images/tcl.png" alt="" />
+						<img
+							style={{ width: "195px" }}
+							src="./images/zimer-logo.png"
+							alt=""
+						/>
+						<img style={{ width: "175px" }} src="./images/thomson.png" alt="" />
+						<img
+							style={{ width: "175px" }}
+							src="./images/well-starts.png"
+							alt=""
+						/>
 					</div>
 				</div>
 			</div>

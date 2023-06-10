@@ -55,3 +55,46 @@
 	display: flex;
 	gap: 20px;
 }
+
+@media screen and (max-width: 1000px) {
+	.form-box-left {
+		border: none;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.form-box {
+		flex-direction: column;
+		padding: 20px 15px;
+	}
+
+	.right-logos {
+		display: none !important;
+	}
+
+	.request form {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.input__group-row {
+		flex-wrap: wrap;
+	}
+
+	.input__group {
+		width: 100% !important;
+	}
+
+	.about__text {
+		font-size: 20px !important;
+	}
+
+	.form-box label {
+		font-size: 18px;
+	}
+
+	.request {
+		padding: 90px 20px 20px 20px;
+	}
+}

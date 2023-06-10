@@ -102,3 +102,24 @@ export const words = {
 		partners_heading: "Hamkorlar",
 	},
 };
+
+export const footer = {
+	ru: {
+		support: "ПОДДЕРЖКА",
+		about: "О НАС",
+		products: "ПРОДУКЦИЯ",
+		contact: "СВЯЗАТЬСЯ С НАМИ",
+	},
+	en: {
+		support: "SUPPORT",
+		about: "ABOUT US",
+		products: "PRODUCTS",
+		contact: "CONTACT US",
+	},
+	uz: {
+		support: "YORDAM",
+		about: "BIZ HAQIMIZDA",
+		products: "MAHSULOTLAR",
+		contact: "BIZ BILAN BOG'LANING",
+	},
+};

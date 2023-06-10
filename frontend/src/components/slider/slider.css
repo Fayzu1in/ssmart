@@ -27,6 +27,7 @@
 	transform: translateX(0);
 	width: 100vw;
 	background: transparent;
+	transition: 0.3s;
 }
 
 .card.prev {

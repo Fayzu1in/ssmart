@@ -29,7 +29,8 @@ export function ProductsContainer({
 			<div
 				className="products__container-main"
 				style={{
-					height: "700px",
+					height: "620px",
+					width: "465px",
 				}}
 			>
 				<div
@@ -37,6 +38,7 @@ export function ProductsContainer({
 					style={{
 						display: "flex",
 						width: "100%",
+						fontSize: "28px",
 						justifyContent: "center",
 						alignItems: "center",
 						gap: "0",
@@ -75,7 +77,7 @@ export function ProductsContainer({
 					<div
 						className="character-title"
 						style={{
-							fontSize: "32px",
+							fontSize: "26px",
 							padding: "12px 32px",
 							width: "500px",
 							textAlign: "center",
@@ -89,7 +91,7 @@ export function ProductsContainer({
 					<div
 						className="character__info"
 						style={{
-							fontSize: "20px",
+							fontSize: "16px",
 							padding: "12px 32px",
 							width: "500px",
 							backgroundColor: "rgb(223, 223, 223)",
@@ -98,7 +100,7 @@ export function ProductsContainer({
 							flexDirection: "column",
 							justifyContent: "center",
 							gap: "20px",
-							height: "607px",
+							height: "535px",
 						}}
 					>
 						<span className="display" style={{}}>

@@ -29,6 +29,7 @@ class Product(models.Model):
     voice_control = models.BooleanField(("Голосовое управление"), default=False)
     tech = models.CharField(("Технологии"), max_length=255, blank=True)
     price = models.CharField(("Цена"), max_length=100, blank=True)
+    url = models.CharField(("Ссылка на товар"), max_length=200, blank=True)
     is_published = models.BooleanField(("Опубликован"), default=False)
     created = models.DateTimeField('Создан', auto_now_add=True)
     updated = models.DateTimeField('Изменен',auto_now=True)
