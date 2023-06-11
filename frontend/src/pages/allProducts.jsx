@@ -86,7 +86,7 @@ export function AllProducts() {
 										fontSize: "24px",
 										justifyContent: "center",
 										alignItems: "center",
-										gap: "0",
+										gap: "10px",
 										marginTop: "20px",
 									}}
 								>
