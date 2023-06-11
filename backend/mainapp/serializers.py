@@ -45,6 +45,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'tech',
             'price',
             'is_published',
+            'url'
             )
         
 

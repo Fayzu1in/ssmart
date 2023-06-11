@@ -69,6 +69,10 @@
 	align-items: center;
 }
 
+.container-main-bottom a:hover {
+	color: #fff;
+}
+
 .main-bottom-price {
 	font-size: 26px;
 	color: #fff;

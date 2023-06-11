@@ -2,6 +2,43 @@ import { styles } from "./service.css";
 import { useState, useEffect, useContext } from "react";
 import { LanguageContext } from "../context/language";
 import { words } from "../words";
+
+// const CardSlider = ({ cards }) => {
+// 	const [currentCard, setCurrentCard] = useState(0);
+// 	console.log(cards);
+// 	const handlePrevCard = () => {
+// 		setCurrentCard(currentCard === 0 ? cards.length - 1 : currentCard - 1);
+// 	};
+
+// 	const handleNextCard = () => {
+// 		setCurrentCard(currentCard === cards.length - 1 ? 0 : currentCard + 1);
+// 	};
+
+// 	return (
+// 		<div className="card-slider">
+// 			<div className="card-container">
+// 				{cards.map((card) => {
+// 					<div
+// 						style={{
+// 							backgroundColor: `${card.background_color}` || "white",
+// 							backgroundImage: `url(${card.image})`,
+// 							backgroundSize: "contain",
+// 							backgroundPosition: "center",
+// 							backgroundRepeat: "no-repeat",
+// 						}}
+// 						className="partners__container-item card"
+// 						// key={partner.id}
+// 					></div>;
+// 				})}
+// 			</div>
+// 			<div className="controls">
+// 				<button onClick={handlePrevCard}>Previous</button>
+// 				<button onClick={handleNextCard}>Next</button>
+// 			</div>
+// 		</div>
+// 	);
+// };
+
 export function Service() {
 	const [partners, setPartners] = useState([]);
 	const [banner, setBanner] = useState("");
@@ -92,6 +129,7 @@ export function Service() {
 					{words[language]["partners_heading"]}
 				</h2>
 				<div className="partners__container">
+					{/* <CardSlider cards={partners} /> */}
 					{partners.map((partner) => (
 						<div
 							style={{

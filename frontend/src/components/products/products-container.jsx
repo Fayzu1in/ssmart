@@ -69,7 +69,16 @@ export function ProductsContainer({
 					<span className="main-bottom-price">
 						{price} {words[language]["currency"]}
 					</span>
-					<button className="btn-primary">{words[language]["buy"]}</button>
+					<a
+						href={url}
+						style={{
+							textDecoration: "none",
+							cursor: "pointer",
+						}}
+						className="btn-primary"
+					>
+						{words[language]["buy"]}
+					</a>
 				</div>
 			</div>
 			<div className="products__container-left">
