@@ -5,6 +5,7 @@ import { ProductsContainer } from "../components/products/products-container";
 import { Vitrina } from "../components/vitrina/vitrina";
 import { words } from "../components/words";
 import { Hero } from "../components/hero/hero";
+import { Footer } from "../components/footer/footer";
 
 export function AllProducts() {
 	const [products, setProducts] = useState([]);
@@ -23,184 +24,192 @@ export function AllProducts() {
 	// getProducts();
 	console.log(products);
 	return (
-		<section
-			className="all__products"
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				gap: "50px",
-			}}
-		>
-			<Hero />
-			<h1 className="products__heading" style={{}}>
-				Продукция
-			</h1>
-			<div
-				className="products__wrapper"
+		<>
+			<section
+				className="all__products"
 				style={{
 					display: "flex",
-					flexWrap: "wrap",
-					justifyContent: "center",
-					gap: "25px",
+					flexDirection: "column",
+					gap: "50px",
+					marginBottom: "50px",
 				}}
 			>
-				{products.map((product) => (
-					// <ProductsContainer
-					// 	name={product.name}
-					// 	picture={product.picture}
-					// 	os_type={product.os_type}
-					// 	is_new={product.is_new}
-					// 	display={product.display}
-					// 	resolution={product.resolution}
-					// 	brightness={product.brightness}
-					// 	contrast={product.contrast}
-					// 	voice={product.voice}
-					// 	ac={product.ac}
-					// 	system={product.system}
-					// 	wifi={product.wifi}
-					// 	ram={product.ram}
-					// 	voice_control={product.voice_control}
-					// 	tech={product.tech}
-					// 	price={product.price}
-					// 	is_published={product.is_published}
-					// 	url={product.url}
-					// 	key={product.id}
-					// />
-					<div className="products__container">
-						<div
-							className="products__container-main"
-							style={{
-								height: "490px",
-								width: "335px",
-							}}
-						>
+				<Hero />
+				<h1 className="products__heading" style={{}}>
+					{words[language]["products_heading"]}
+				</h1>
+				<div
+					className="products__wrapper"
+					style={{
+						display: "flex",
+						flexWrap: "wrap",
+						justifyContent: "center",
+						rowGap: "50px",
+						columnGap: "25px",
+					}}
+				>
+					{products.map((product) => (
+						// <ProductsContainer
+						// 	name={product.name}
+						// 	picture={product.picture}
+						// 	os_type={product.os_type}
+						// 	is_new={product.is_new}
+						// 	display={product.display}
+						// 	resolution={product.resolution}
+						// 	brightness={product.brightness}
+						// 	contrast={product.contrast}
+						// 	voice={product.voice}
+						// 	ac={product.ac}
+						// 	system={product.system}
+						// 	wifi={product.wifi}
+						// 	ram={product.ram}
+						// 	voice_control={product.voice_control}
+						// 	tech={product.tech}
+						// 	price={product.price}
+						// 	is_published={product.is_published}
+						// 	url={product.url}
+						// 	key={product.id}
+						// />
+						<div className="products__container">
 							<div
-								className="container-main-title"
+								className="products__container-main"
 								style={{
-									display: "flex",
-									width: "100%",
-									fontSize: "24px",
-									justifyContent: "center",
-									alignItems: "center",
-									gap: "0",
-									marginTop: "20px",
+									height: "490px",
+									width: "335px",
 								}}
 							>
-								<img
-									style={{
-										width: "135px",
-									}}
-									src={product.os_type}
-									className="system"
-								></img>
-								{product.name}
-							</div>
-							<div
-								className="products__main-picture"
-								style={{
-									backgroundImage: `url(${product.picture})`,
-									width: "240px",
-									height: "200px",
-									top: "175px",
-								}}
-							></div>
-							<div
-								className="container-main-bottom"
-								style={{
-									gap: "15px",
-								}}
-							>
-								<span
-									className="main-bottom-price"
-									style={{
-										fontSize: "18px",
-									}}
-								>
-									{product.price} {words[language]["currency"]}
-								</span>
-								<a
-									href={product.url}
-									style={{
-										textDecoration: "none",
-										cursor: "pointer",
-										fontSize: "20px",
-									}}
-									className="btn-primary"
-								>
-									{words[language]["buy"]}
-								</a>
-							</div>
-						</div>
-						<div className="products__container-left">
-							<div className="product__character">
 								<div
-									className="character-title"
+									className="container-main-title"
 									style={{
-										fontSize: "26px",
-										padding: "12px 32px",
-										width: "335px",
-										textAlign: "center",
-										backgroundColor: "rgb(223, 223, 223)",
-										borderRadius: "20px",
-										marginBottom: "20px",
-									}}
-								>
-									Характеристики
-								</div>
-								<div
-									className="character__info"
-									style={{
-										fontSize: "15px",
-										padding: "6px 15px",
-										width: "335px",
-										backgroundColor: " rgb(223, 223, 223)",
-										borderRadius: "20px",
 										display: "flex",
-										flexDirection: "column",
+										width: "100%",
+										fontSize: "24px",
 										justifyContent: "center",
-										gap: "10px",
-										height: "405px",
+										alignItems: "center",
+										gap: "0",
+										marginTop: "20px",
 									}}
 								>
-									<span className="display" style={{}}>
-										<b>Экран</b> - {product.display}
+									<img
+										style={{
+											width: "135px",
+										}}
+										src={product.os_type}
+										className="system"
+									></img>
+									{product.name}
+								</div>
+								<div
+									className="products__main-picture"
+									style={{
+										backgroundImage: `url(${product.picture})`,
+										width: "240px",
+										height: "200px",
+										top: "175px",
+									}}
+								></div>
+								<div
+									className="container-main-bottom"
+									style={{
+										gap: "15px",
+									}}
+								>
+									<span
+										className="main-bottom-price"
+										style={{
+											fontSize: "18px",
+										}}
+									>
+										{product.price} {words[language]["currency"]}
 									</span>
-									<span className="display" style={{}}>
-										<b>Разрешения</b> - {product.resolution}
-									</span>
-									<span className="display" style={{}}>
-										<b>Яркость</b> - {product.brightness}
-									</span>
-									<span className="display" style={{}}>
-										<b>Контраст</b> - {product.contrast}
-									</span>
-									<span className="display" style={{}}>
-										<b>Звук</b> - {product.voice}
-									</span>
-									<span className="display" style={{}}>
-										<b>Блок Питания</b> - {product.ac}
-									</span>
-									<span className="display" style={{}}>
-										<b>Система</b> - {product.system}
-									</span>
-									<span className="display" style={{}}>
-										<b>Wi-Fi/Bluetooth</b> - {product.wifi}
-									</span>
-									<span className="display" style={{}}>
-										<b>RAM/DDR</b> - {product.ram}
-									</span>
-									<span className="display" style={{}}>
-										<b>Голосовое управление</b> - {product.voice_control}
-									</span>
-									<span className="display" style={{}}>
-										<b>Технологии</b> - {product.tech}
-									</span>
+									<a
+										href={product.url}
+										style={{
+											textDecoration: "none",
+											cursor: "pointer",
+											fontSize: "20px",
+										}}
+										className="btn-primary"
+									>
+										{words[language]["buy"]}
+									</a>
+								</div>
+							</div>
+							<div className="products__container-left">
+								<div className="product__character">
+									<div
+										className="character-title"
+										style={{
+											fontSize: "26px",
+											padding: "12px 32px",
+											width: "335px",
+											textAlign: "center",
+											backgroundColor: "rgb(223, 223, 223)",
+											borderRadius: "20px",
+											marginBottom: "20px",
+										}}
+									>
+										{words[language]["character"]}
+									</div>
+									<div
+										className="character__info"
+										style={{
+											fontSize: "15px",
+											padding: "6px 15px",
+											width: "335px",
+											backgroundColor: " rgb(223, 223, 223)",
+											borderRadius: "20px",
+											display: "flex",
+											flexDirection: "column",
+											justifyContent: "center",
+											gap: "10px",
+											height: "405px",
+										}}
+									>
+										<span className="display" style={{}}>
+											<b>{words[language]["display"]}</b> - {product.display}
+										</span>
+										<span className="display" style={{}}>
+											<b>{words[language]["resolution"]}</b> -{" "}
+											{product.resolution}
+										</span>
+										<span className="display" style={{}}>
+											<b>{words[language]["brightness"]}</b> -{" "}
+											{product.brightness}
+										</span>
+										<span className="display" style={{}}>
+											<b>{words[language]["contrast"]}</b> - {product.contrast}
+										</span>
+										<span className="display" style={{}}>
+											<b>{words[language]["sound"]}</b> - {product.voice}
+										</span>
+										<span className="display" style={{}}>
+											<b>{words[language]["ac"]}</b> - {product.ac}
+										</span>
+										<span className="display" style={{}}>
+											<b>{words[language]["system"]}</b> - {product.system}
+										</span>
+										<span className="display" style={{}}>
+											<b>Wi-Fi/Bluetooth</b> - {product.wifi}
+										</span>
+										<span className="display" style={{}}>
+											<b>RAM/DDR</b> - {product.ram}
+										</span>
+										<span className="display" style={{}}>
+											<b>{words[language]["voice"]}</b> -{" "}
+											{product.voice_control}
+										</span>
+										<span className="display" style={{}}>
+											<b>{words[language]["tech"]}</b> - {product.tech}
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				))}
-			</div>
-		</section>
+					))}
+				</div>
+			</section>
+			<Footer />
+		</>
 	);
 }

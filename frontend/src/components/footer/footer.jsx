@@ -50,13 +50,13 @@ export function Footer() {
 						{footer[language]["products"]}
 					</span>
 					<li className="footer__list-item">
-						<a href="">Все товары</a>
+						<a href="products">Все товары</a>
 					</li>
 					<li className="footer__list-item">
-						<a href="">Ssmart Web OS</a>
+						<a href="products">Ssmart Web OS</a>
 					</li>
 					<li className="footer__list-item">
-						<a href="">Ssmart Android</a>
+						<a href="products">Ssmart Android</a>
 					</li>
 				</ul>
 				<ul className="footer__list">
@@ -64,7 +64,7 @@ export function Footer() {
 						{footer[language]["contact"]}
 					</span>
 					<li className="footer__list-item">
-						<a href="mailto: abc@example.com">Эл.почта</a>
+						<a href="mailto: info@ssmart.uz">Эл.почта</a>
 					</li>
 					<li className="footer__list-item">
 						<a href="tel:+998712209009">Колл-центр : +998 71 220 90 09</a>

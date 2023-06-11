@@ -15,6 +15,21 @@ class ProductList(generics.ListAPIView):
     queryset = Product.objects.filter(is_published=True)
     serializer_class = ProductSerializer
 
+    def get(self, request, *args, **kwargs):
+        queryset = Product.objects.all()
+        serializer = ProductSerializer(queryset, many=True)
+        system = request.query_params.get('system', None)
+
+        if system:
+            queryset = queryset.filter(system=system)
+            serializer = ProductSerializer(queryset, many=True)
+            return Response(serializer.data)
+ 
+    
+
+        return Response(serializer.data)
+
+
 
 
 

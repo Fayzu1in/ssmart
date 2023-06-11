@@ -96,7 +96,7 @@ export function ProductsContainer({
 							marginBottom: "20px",
 						}}
 					>
-						Характеристики
+						{words[language]["character"]}
 					</div>
 					<div
 						className="character__info"
@@ -114,25 +114,25 @@ export function ProductsContainer({
 						}}
 					>
 						<span className="display" style={{}}>
-							<b>Экран</b> - {display}
+							<b>{words[language]["display"]}</b> - {display}
 						</span>
 						<span className="display" style={{}}>
-							<b>Разрешения</b> - {resolution}
+							<b>{words[language]["resolution"]}</b> - {resolution}
 						</span>
 						<span className="display" style={{}}>
-							<b>Яркость</b> - {brightness}
+							<b>{words[language]["brightness"]}</b> - {brightness}
 						</span>
 						<span className="display" style={{}}>
-							<b>Контраст</b> - {contrast}
+							<b>{words[language]["contrast"]}</b> - {contrast}
 						</span>
 						<span className="display" style={{}}>
-							<b>Звук</b> - {voice}
+							<b>{words[language]["sound"]}</b> - {voice}
 						</span>
 						<span className="display" style={{}}>
-							<b>Блок Питания</b> - {ac}
+							<b>{words[language]["ac"]}</b> - {ac}
 						</span>
 						<span className="display" style={{}}>
-							<b>Система</b> - {system}
+							<b>{words[language]["system"]}</b> - {system}
 						</span>
 						<span className="display" style={{}}>
 							<b>Wi-Fi/Bluetooth</b> - {wifi}
@@ -141,10 +141,10 @@ export function ProductsContainer({
 							<b>RAM/DDR</b> - {ram}
 						</span>
 						<span className="display" style={{}}>
-							<b>Голосовое управление</b> - {voice_control}
+							<b>{words[language]["voice"]}</b> - {voice_control}
 						</span>
 						<span className="display" style={{}}>
-							<b>Технологии</b> - {tech}
+							<b>{words[language]["tech"]}</b> - {tech}
 						</span>
 					</div>
 				</div>

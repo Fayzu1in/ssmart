@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import { Footer } from "../components/footer/footer";
 
 export function Support() {
-
-	
-
 	return (
 		<>
 			<section className="support">
@@ -40,7 +37,7 @@ export function Support() {
 						</button>
 						<span>Чат поддержки 24/7</span>
 					</div>
-					<a href="mailto: abc@example.com" className="support__center-box">
+					<a href="mailto: info@ssmart.uz" className="support__center-box">
 						<span> Свяжитесь с нами по Электронной почте</span>
 						<img
 							style={{
