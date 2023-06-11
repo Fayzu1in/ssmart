@@ -60,6 +60,7 @@ export const Slider = ({ products }) => {
 								tech={product.tech}
 								price={product.price}
 								is_published={product.is_published}
+								url={product.url}
 								key={product.id}
 							/>
 						</div>

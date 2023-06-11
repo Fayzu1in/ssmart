@@ -20,6 +20,7 @@ export function ProductsContainer({
 	voice_control,
 	tech,
 	price,
+	url,
 	is_published,
 }) {
 	const { language } = useContext(LanguageContext);
@@ -147,30 +148,6 @@ export function ProductsContainer({
 						</span>
 					</div>
 				</div>
-				{/* <div className="vitrina__right-top product">
-			
-					<button
-						style={{
-							marginTop: "70px",
-							fontSize: "24px",
-						}}
-						className="btn-primary"
-					>
-						{words[language]["more"]}
-					</button>
-					<div
-						className="right-top-image"
-						style={{
-							backgroundImage: `url(${picture})`,
-						}}
-					></div>
-					<span className="characteristics">Характеристики</span>
-				</div> */}
-				{/* <img
-					className="products__image-right"
-					src="./images/webos-2.png"
-					alt=""
-				/> */}
 			</div>
 		</div>
 	);
