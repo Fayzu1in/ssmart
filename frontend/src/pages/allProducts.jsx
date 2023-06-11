@@ -83,7 +83,7 @@ export function AllProducts() {
 									style={{
 										display: "flex",
 										width: "100%",
-										fontSize: "24px",
+										fontSize: "22px",
 										justifyContent: "center",
 										alignItems: "center",
 										gap: "10px",
