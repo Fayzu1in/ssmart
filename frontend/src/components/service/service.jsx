@@ -3,8 +3,8 @@ import { useState, useEffect, useContext } from "react";
 import { LanguageContext } from "../context/language";
 import { words } from "../words";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 export function Service() {
 	const [partners, setPartners] = useState([]);
