@@ -3,6 +3,7 @@ import { words } from "../words";
 import { LanguageContext } from "../context/language";
 import styles from "./header.css";
 import React, { useEffect, useState, createContext, useContext } from "react";
+import { BurgerMenu } from "../burgerMenu/burgerMenu";
 export { Header };
 
 // function Burger() {
@@ -202,6 +203,9 @@ function Header(logo, globe) {
 					</ul>
 				</nav>
 			</div>
+
+			{/* ! menu */}
+			<BurgerMenu />
 			<div className="header__main__user not">
 				<a href="/support" className="btn">
 					{words[language]["support"]}

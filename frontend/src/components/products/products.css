@@ -252,6 +252,7 @@
 
 	.product__os {
 		padding-left: unset;
+		width: 350px;
 	}
 	.product__os-text {
 		padding: unset;
@@ -310,6 +311,12 @@
 		height: 430px;
 	}
 
+	.product-img {
+		width: 350px;
+		height: 210px;
+		top: 270px;
+	}
+
 	.products__image-right {
 		width: 350px;
 	}
@@ -323,9 +330,24 @@
 
 	.character-title,
 	.character__info {
-		width: 400px !important;
+		width: 350px !important;
 	}
 
+	.products__container-main {
+		width: 350px !important;
+	}
+
+	.arrow-btn {
+		margin-top: 450px !important;
+	}
+
+	.banner {
+		margin-bottom: 20px !important;
+	}
+
+	.service__container {
+		margin-bottom: 20px !important;
+	}
 	.service {
 		margin-top: 1300px !important;
 	}
