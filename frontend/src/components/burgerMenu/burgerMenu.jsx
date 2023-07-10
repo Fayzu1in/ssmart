@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import styles from "./burgerMenu.css";
 import { words } from "../words";
 import { LanguageContext } from "../context/language";
 
