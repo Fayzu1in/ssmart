@@ -68,7 +68,7 @@ export const BurgerMenu = () => {
 						display: "none",
 					}}
 				>
-					<li className="menu-list-item">
+					{/* <li className="menu-list-item">
 						<a href="/request">{words[language]["dealers"]}</a>
 					</li>
 					<li className="menu-list-item">
@@ -78,7 +78,7 @@ export const BurgerMenu = () => {
 					<li className="menu-list-item">
 						{" "}
 						<a href="/service">{words[language]["warranty"]}</a>
-					</li>
+					</li> */}
 				</ul>
 			)}
 		</div>
