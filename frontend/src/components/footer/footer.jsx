@@ -67,7 +67,7 @@ export function Footer() {
 						<a href="mailto: info@ssmart.uz">Эл.почта</a>
 					</li>
 					<li className="footer__list-item">
-						<a href="tel:+998712209009">Колл-центр : +998 71 220 90 09</a>
+						<a href="tel:+998712209009">Колл-центр : +998 75 220 00 55</a>
 					</li>
 					<li className="footer__list-item">
 						<a href="">Часы работы : с 9:00 до 18:00 Карши</a>

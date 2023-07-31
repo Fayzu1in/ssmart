@@ -47,8 +47,18 @@
 	}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
 	.warranty {
-		padding-top: 70px;
+		/* padding-top: 70px; */
+		padding: 70px 20px 0 20px;
+	}
+
+	.support__center-box {
+		min-width: 350px !important;
+	}
+
+	.about__text {
+		width: 350px;
+		margin: 0 auto 20px auto;
 	}
 }

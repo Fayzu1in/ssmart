@@ -33,7 +33,7 @@ export function AboutUsComponent() {
 				</p>
 			</div>
 			<div
-				className="about__smart"
+				className="about__smart founded"
 				style={{
 					backgroundColor: "#e2e2e2",
 					height: "145px",

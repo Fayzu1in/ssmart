@@ -94,3 +94,43 @@
 		width: 100%;
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.about {
+		padding: 100px 20px 0 20px;
+	}
+	.about-logo {
+		width: 240px;
+	}
+
+	.about__smart {
+		width: 350px;
+		margin: 0 auto 20px auto;
+	}
+	.about__smart-left {
+		padding: 15px 25px;
+		display: flex;
+		justify-content: center;
+		border-right: none !important;
+	}
+	.about__smart-right {
+		padding: 15px 25px;
+	}
+
+	.about__smart.founded {
+		height: 270px !important;
+		width: 350px;
+		margin: 0 auto 20px auto;
+	}
+
+	.about__text-second {
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.text-second-left,
+	.text-second-right {
+		width: 350px;
+	}
+}

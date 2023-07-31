@@ -108,6 +108,7 @@ class DealerRequestListView(generics.ListAPIView):
 
     def post(self, request, *args, **kwargs):
         serializer = DealerRequestSerializer(data=request.data)
+
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
