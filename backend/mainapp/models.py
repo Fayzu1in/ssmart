@@ -14,7 +14,7 @@ class Product(models.Model):
         ('webos', 'webos')
     }
     name = models.CharField(("Название"), max_length=100)
-    picture = models.ImageField(("Картинка"), upload_to='pictures/products', height_field=None, width_field=None, max_length=None, null=True)
+    picture = models.ImageField(("Картинка"), upload_to='pictures/products', height_field=None, width_field=None, max_length=None, null=True, blank=True)
     os_type = models.CharField(("Тип ОС"), max_length=100, choices=os_choices, blank=True)
     is_new = models.BooleanField(("Новый"), default=True)
     display = models.CharField(("Экран"), max_length=255,blank=True)
