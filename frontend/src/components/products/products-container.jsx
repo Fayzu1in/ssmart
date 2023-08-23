@@ -125,6 +125,9 @@ export function ProductsContainer({
 						width: "250px",
 						height:"200px",
 						backgroundImage: `url(${os_type})`,
+						backgroundPositionX:"center",
+						backgroundSize:"cover",
+						backgroundRepeat:"no-repeat"
 					}}>
 					</div>
 					{/* <img
