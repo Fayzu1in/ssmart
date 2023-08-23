@@ -82,7 +82,7 @@ export function AllProducts() {
 									className="products__main-picture"
 									style={{
 										backgroundImage: `url(${product.picture})`,
-										width: "240px",
+										width: "310px",
 										height: "200px",
 										top: "175px",
 									}}
