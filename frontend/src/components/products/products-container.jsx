@@ -30,7 +30,7 @@ export function ProductsContainer({
 			<div
 				className="products__container-main"
 				style={{
-					height: "620px",
+					height: "563px",
 					width: "465px",
 				}}
 			>
@@ -39,7 +39,7 @@ export function ProductsContainer({
 					style={{
 						display: "flex",
 						width: "100%",
-						fontSize: "28px",
+						fontSize: "24px",
 						justifyContent: "center",
 						alignItems: "center",
 						gap: "0",
@@ -48,7 +48,7 @@ export function ProductsContainer({
 				>
 					<img
 						style={{
-							width: "200px",
+							width: "140px",
 						}}
 						src={os_type}
 						className="system"
@@ -83,7 +83,69 @@ export function ProductsContainer({
 				</div>
 			</div>
 			<div className="products__container-left">
-				<div className="product__character">
+				<div className="products__container-left-up" style={{
+					padding:'30px 35px',
+					background: '#5e5e5e',
+					color:"#fff",
+					fontSize:'20px',
+					width:'500px',
+					borderRadius:"20px",
+				}}>
+					<span>Характеристики</span>
+					<div style={{
+						display:'flex',
+						flexDirection:'column',
+						margin:"75px 0 "
+					}}>
+						<span style={{
+							fontSize:'28px'
+						}}>Ultra HD 4K</span>
+						<span style={{
+							fontSize:'20px'
+						}}>Дисплей с яркими цветами</span>
+					</div>
+					<a href={url} className="btn-primary" style={{
+						marginTop:"40px"
+					}}>{words[language]["more"]}</a>
+				</div>
+				<div className="" style={{
+					width:'500px',
+					height:'202px',
+					display:'flex',
+					flexDirection:'column',
+					justifyContent:'center',
+					alignItems:'center',
+					padding:'16px 15px',
+					gap:'40px',
+					backgroundColor:"#fff",
+					borderRadius:"20px"
+				}}>
+					<img
+						className="webos-logo"
+						style={{
+							marginTop: "20px",
+							width: "230px",
+							height: "unset",
+						}}
+						// src="./images/webos_logo.png"
+						src={os_type}
+						alt=""
+					/>
+					<span className="os-text" style={{
+						fontSize:"18px",
+						// display:"flex",
+						// gap:"10px"
+					}}>
+						{words[language]["os_title"]}
+						<span className="os-text-light">
+							{words[language]["os_description"]}
+						</span>
+					</span>
+				</div>
+				
+					{/* characteristics block */}
+				{/* <div className="product__character">
+					<div></div>
 					<div
 						className="character-title"
 						style={{
@@ -147,7 +209,7 @@ export function ProductsContainer({
 							<b>{words[language]["tech"]}</b> - {tech}
 						</span>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

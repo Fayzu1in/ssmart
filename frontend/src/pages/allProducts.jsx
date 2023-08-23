@@ -49,27 +49,6 @@ export function AllProducts() {
 					}}
 				>
 					{products.map((product) => (
-						// <ProductsContainer
-						// 	name={product.name}
-						// 	picture={product.picture}
-						// 	os_type={product.os_type}
-						// 	is_new={product.is_new}
-						// 	display={product.display}
-						// 	resolution={product.resolution}
-						// 	brightness={product.brightness}
-						// 	contrast={product.contrast}
-						// 	voice={product.voice}
-						// 	ac={product.ac}
-						// 	system={product.system}
-						// 	wifi={product.wifi}
-						// 	ram={product.ram}
-						// 	voice_control={product.voice_control}
-						// 	tech={product.tech}
-						// 	price={product.price}
-						// 	is_published={product.is_published}
-						// 	url={product.url}
-						// 	key={product.id}
-						// />
 						<div className="products__container">
 							<div
 								className="products__container-main"

@@ -90,6 +90,12 @@
 	font-weight: 300;
 	color: #fff;
 	cursor: pointer;
+	text-decoration: none;
+}
+
+.btn-primary:hover {
+	text-decoration: none;
+	color: #fff;
 }
 
 .vitrina__right-top.product {

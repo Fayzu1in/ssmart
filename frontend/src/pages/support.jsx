@@ -115,7 +115,7 @@ export function Support() {
 							src="./images/phone.png"
 							alt=""
 						/>
-						<span style={{ color: "#fff" }}>+998 71 220 90 09</span>
+						<span style={{ color: "#fff" }}>+998 75 220 00 55</span>
 						<span
 							style={{
 								fontSize: "18px",
