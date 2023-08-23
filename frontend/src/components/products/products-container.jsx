@@ -39,7 +39,7 @@ export function ProductsContainer({
 					style={{
 						display: "flex",
 						width: "100%",
-						fontSize: "24px",
+						fontSize: "26px",
 						justifyContent: "center",
 						alignItems: "center",
 						gap: "0",
@@ -48,7 +48,7 @@ export function ProductsContainer({
 				>
 					<img
 						style={{
-							width: "140px",
+							width: "220px",
 						}}
 						src={os_type}
 						className="system"
@@ -120,17 +120,24 @@ export function ProductsContainer({
 					backgroundColor:"#fff",
 					borderRadius:"20px"
 				}}>
-					<img
+					<div className="os_wrapper" style={{
+						marginTop: "20px",
+						width: "250px",
+						height:"200px",
+						backgroundImage: `url(${os_type})`,
+					}}>
+					</div>
+					{/* <img
 						className="webos-logo"
 						style={{
 							marginTop: "20px",
 							width: "230px",
 							height: "unset",
 						}}
-						// src="./images/webos_logo.png"
-						src={os_type}
+						src="./images/android_os.png"
+						// src={os_type}
 						alt=""
-					/>
+					/> */}
 					<span className="os-text" style={{
 						fontSize:"18px",
 						// display:"flex",
