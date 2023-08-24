@@ -125,7 +125,7 @@ export function ProductsContainer({
 				}}>
 					<div className="os_wrapper" style={{
 						marginTop: "20px",
-						width: "235px",
+						width: "232px",
 						height:"220px",
 						backgroundImage: `url(${os_type})`,
 						backgroundPositionX:"center",
