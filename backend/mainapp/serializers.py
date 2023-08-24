@@ -7,12 +7,11 @@ class ProductSerializer(serializers.ModelSerializer):
     os_type = serializers.SerializerMethodField()
     voice_control = serializers.SerializerMethodField()
 
-
     def get_os_type(self, obj):
         try:
             if obj.os_type == 'android':
                 return 'api/pictures/products/android.png'
-            else: 
+            else:
                 return 'api/pictures/products/webos.png'
         except:
             pass
@@ -23,15 +22,15 @@ class ProductSerializer(serializers.ModelSerializer):
         else:
             return 'Нет'
 
-
     class Meta:
         model = Product
         fields = (
-            'id', 
-            'name', 
+            'id',
+            'name',
             'picture',
+            'picture_2',
             'os_type',
-            'is_new', 
+            'is_new',
             'display',
             'resolution',
             'brightness',
@@ -46,77 +45,67 @@ class ProductSerializer(serializers.ModelSerializer):
             'price',
             'is_published',
             'url'
-            )
-        
-
+        )
 
 
 class PartnersSerializer(serializers.ModelSerializer):
 
     background_color = serializers.SerializerMethodField()
 
-
     def get_background_color(self, obj):
-        return obj.background_color 
-    
+        return obj.background_color
 
     class Meta:
         model = Partners
         fields = (
-            'id', 
-            'name', 
-            'image', 
+            'id',
+            'name',
+            'image',
             'background_color',
             'info'
-            )
-    
+        )
 
 
 class AdvertsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Adverts
         fields = (
-            'id', 
-            'name', 
-            'image', 
+            'id',
+            'name',
+            'image',
             'info'
-            )
-        
+        )
 
 
 class WarrantySerializer(serializers.ModelSerializer):
     class Meta:
         model = Warranty
         fields = (
-            'id', 
-            'name', 
-            'series', 
-            'talon', 
-            'phone', 
-            'city', 
+            'id',
+            'name',
+            'series',
+            'talon',
+            'phone',
+            'city',
             'dealer'
-            )
-        
+        )
 
 
 class WarrantyDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = WarrantyData
         fields = (
-            'id', 
+            'id',
             'series'
-            )
-        
-
+        )
 
 
 class DealerRequestSerializer(serializers.ModelSerializer):
 
-
-    class Meta: 
+    class Meta:
         model = DealerRequest
         fields = (
-            'name', 
+            'name',
             'inn',
             'city',
             'shops',
