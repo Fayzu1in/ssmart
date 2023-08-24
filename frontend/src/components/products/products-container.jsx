@@ -59,6 +59,8 @@ export function ProductsContainer({
 					className="products__main-picture"
 					style={{
 						backgroundImage: `url(${picture})`,
+						width:"400px", 
+						top:"165px"
 					}}
 				></div>
 				{/* <img
@@ -122,7 +124,7 @@ export function ProductsContainer({
 				}}>
 					<div className="os_wrapper" style={{
 						marginTop: "20px",
-						width: "250px",
+						width: "220px",
 						height:"200px",
 						backgroundImage: `url(${os_type})`,
 						backgroundPositionX:"center",
