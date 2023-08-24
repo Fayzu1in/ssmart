@@ -38,12 +38,11 @@ export function ProductsContainer({
 					className="container-main-title"
 					style={{
 						display: "flex",
-						gap:"10px",
 						width: "100%",
 						fontSize: "26px",
 						justifyContent: "center",
 						alignItems: "center",
-						gap: "0",
+						gap: "10px",
 						marginTop: "20px",
 					}}
 				>
