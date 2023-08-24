@@ -38,6 +38,7 @@ export function ProductsContainer({
 					className="container-main-title"
 					style={{
 						display: "flex",
+						gap:'10px',
 						width: "100%",
 						fontSize: "26px",
 						justifyContent: "center",
@@ -48,7 +49,7 @@ export function ProductsContainer({
 				>
 					<img
 						style={{
-							width: "220px",
+							width: "180px",
 						}}
 						src={os_type}
 						className="system"
@@ -124,8 +125,8 @@ export function ProductsContainer({
 				}}>
 					<div className="os_wrapper" style={{
 						marginTop: "20px",
-						width: "220px",
-						height:"200px",
+						width: "235px",
+						height:"220px",
 						backgroundImage: `url(${os_type})`,
 						backgroundPositionX:"center",
 						backgroundSize:"cover",
