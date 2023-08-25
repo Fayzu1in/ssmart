@@ -44,6 +44,7 @@ export function ProductsContainer({
 						alignItems: "center",
 						gap: "10px",
 						marginTop: "20px",
+						flexDirection:"column"
 					}}
 				>
 					<img
@@ -92,6 +93,7 @@ export function ProductsContainer({
 					fontSize:'20px',
 					width:'500px',
 					borderRadius:"20px",
+					position:"relative"
 				}}>
 					<span>Характеристики</span>
 					<div style={{
@@ -109,6 +111,16 @@ export function ProductsContainer({
 					<a href={url} className="btn-primary" style={{
 						marginTop:"40px"
 					}}>{words[language]["more"]}</a>
+					{/* wrapper for image 2 */}
+					{/* <div className="products__container-left-up-image" style={{
+						width: "232px",
+						height:"220px",
+						backgroundImage: `url(${picture2})`,
+						backgroundPositionX:"center",
+						backgroundSize:"cover",
+						backgroundRepeat:"no-repeat"
+					}}>
+					</div> */}
 				</div>
 				<div className="" style={{
 					width:'500px',
