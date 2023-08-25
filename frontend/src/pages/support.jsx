@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Footer } from "../components/footer/footer";
+import {Link} from 'react-router-dom'
+
 
 export function Support() {
 	return (
@@ -37,7 +39,7 @@ export function Support() {
 						</button>
 						<span>Чат поддержки 24/7</span>
 					</div>
-					<a href="mailto: info@ssmart.uz" className="support__center-box">
+					<Link to="mailto: info@ssmart.uz" className="support__center-box">
 						<span> Свяжитесь с нами по Электронной почте</span>
 						<img
 							style={{
@@ -47,10 +49,10 @@ export function Support() {
 							alt=""
 						/>
 						<span>support@ssmart.uz</span>
-					</a>
+					</Link>
 					<div className="support__center-box">
 						<span> Свяжитесь с нами в социальных сетях</span>
-						<a
+						<Link
 							href=""
 							style={{
 								display: "flex",
@@ -73,8 +75,8 @@ export function Support() {
 								/>
 							</div>
 							@ssmart_official
-						</a>
-						<a
+						</Link>
+						<Link
 							href=""
 							style={{
 								display: "flex",
@@ -97,9 +99,9 @@ export function Support() {
 								/>
 							</div>
 							@ssmart_official
-						</a>
+						</Link>
 					</div>
-					<a
+					<Link
 						href="tel:+998712209009"
 						className="support__center-box"
 						style={{
@@ -123,7 +125,7 @@ export function Support() {
 						>
 							Звонок внутри Республики Узбекистан бесплатный
 						</span>
-					</a>
+					</Link>
 				</div>
 			</section>
 			<Footer />

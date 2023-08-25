@@ -2,6 +2,7 @@ import { styles } from "./products.css";
 import { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../context/language";
 import { words } from "../words";
+import {Link} from 'react-router-dom'
 
 export function ProductsContainer({
 	name,
@@ -73,8 +74,8 @@ export function ProductsContainer({
 					<span className="main-bottom-price">
 						{price} {words[language]["currency"]}
 					</span>
-					<a
-						href={url}
+					<Link
+						to={url}
 						style={{
 							textDecoration: "none",
 							cursor: "pointer",
@@ -82,7 +83,7 @@ export function ProductsContainer({
 						className="btn-primary"
 					>
 						{words[language]["buy"]}
-					</a>
+					</Link>
 				</div>
 			</div>
 			<div className="products__container-left">
@@ -108,9 +109,9 @@ export function ProductsContainer({
 							fontSize:'20px'
 						}}>Дисплей с яркими цветами</span>
 					</div>
-					<a href={url} className="btn-primary" style={{
+					<Link to={url} className="btn-primary" style={{
 						marginTop:"40px"
-					}}>{words[language]["more"]}</a>
+					}}>{words[language]["more"]}</Link>
 					{/* wrapper for image 2 */}
 					{/* <div className="products__container-left-up-image" style={{
 						width: "232px",

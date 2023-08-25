@@ -3,6 +3,8 @@ import { useState, useEffect, useContext } from "react";
 import { LanguageContext } from "../context/language";
 import { words } from "../words";
 import Slider from "react-slick";
+import {Link} from 'react-router-dom'
+
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
@@ -69,9 +71,9 @@ export function Service() {
 							<span className="service-left-bottom-title">
 								{words[language]["addresses"]}
 							</span>
-							<a className="service-left-bottom-link" href="">
+							<Link className="service-left-bottom-link" href="">
 								{words[language]["service_points"]}
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -81,15 +83,15 @@ export function Service() {
 							<span className="service-right-top-title">
 								{words[language]["warranty_conditions"]}
 							</span>
-							<a className="service-right-top-link" href="/service">
+							<Link className="service-right-top-link" href="/service">
 								{words[language]["warranty_text"]}
-							</a>
+							</Link>
 						</div>
 					</div>
 					<div className="service-right-bottom">
-						<a href="/where-to-buy" className="service-right-bottom-title">
+						<Link to="/where-to-buy" className="service-right-bottom-title">
 							{words[language]["where_to_buy"]}
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

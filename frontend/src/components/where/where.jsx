@@ -1,5 +1,8 @@
 import { Footer } from "../footer/footer";
+import {Link} from 'react-router-dom'
+
 import "./where.css";
+
 
 export function Where() {
 	return (
@@ -25,7 +28,7 @@ export function Where() {
 					</p>
 				</div>
 				<div className="support__center">
-					<a
+					<Link
 						href="https://elmakon.uz/"
 						className="support__center-box"
 						style={{
@@ -35,9 +38,9 @@ export function Where() {
 						<div className="center-box-logo elmakon"></div>
 						{/* <img src="./images/elmakon.png" alt="" /> */}
 						<button className="btn-primary gray">Перейти на сайт</button>
-					</a>
+					</Link>
 
-					<a
+					<Link
 						href="https://www.goodzone.uz/ru"
 						className="support__center-box"
 						style={{
@@ -47,9 +50,9 @@ export function Where() {
 						<div className="center-box-logo goodzone"></div>
 						{/* <img src="./images/elmakon.png" alt="" /> */}
 						<button className="btn-primary gray">Перейти на сайт</button>
-					</a>
+					</Link>
 
-					<a
+					<Link
 						href="https://idea.uz/"
 						className="support__center-box"
 						style={{
@@ -67,9 +70,9 @@ export function Where() {
 						>
 							Скоро
 						</button>
-					</a>
+					</Link>
 
-					<a
+					<Link
 						href="https://uzum.uz/" 
 						className="support__center-box"
 						style={{
@@ -79,7 +82,7 @@ export function Where() {
 						<div className="center-box-logo uzum"></div>
 						{/* <img src="./images/elmakon.png" alt="" /> */}
 						<button className="btn-primary gray">Перейти на сайт</button>
-					</a>
+					</Link>
 				</div>
 				<div
 					className="about__text"

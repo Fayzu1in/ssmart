@@ -116,7 +116,7 @@ export const Slider = ({ products }) => {
 					cursor: "pointer",
 					width: "64px",
 				}}
-				className="arrow-btn prev"
+				className="arrow-btn next"
 				onClick={handleNextSlide}
 			/>
 		</div>
