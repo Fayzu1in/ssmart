@@ -285,7 +285,7 @@
 */
 
 	.products__main-picture {
-		width: 280px;
+		width: 280px!important;
 	}
 	.container-main-bottom {
 		gap: 15px;
