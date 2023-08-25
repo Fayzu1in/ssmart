@@ -6,6 +6,8 @@ import { Vitrina } from "../components/vitrina/vitrina";
 import { words } from "../components/words";
 import { Hero } from "../components/hero/hero";
 import { Footer } from "../components/footer/footer";
+import {Link} from 'react-router-dom'
+
 
 export function AllProducts() {
 	const [products, setProducts] = useState([]);
@@ -101,7 +103,7 @@ export function AllProducts() {
 									>
 										{product.price} {words[language]["currency"]}
 									</span>
-									<a
+									<Link
 										href={product.url}
 										style={{
 											textDecoration: "none",
@@ -111,7 +113,7 @@ export function AllProducts() {
 										className="btn-primary"
 									>
 										{words[language]["buy"]}
-									</a>
+									</Link>
 								</div>
 							</div>
 							<div className="products__container-left">

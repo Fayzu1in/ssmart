@@ -47,20 +47,20 @@ function Header(logo, globe) {
 		<header className="header__main">
 			<div className="header__left">
 				<div className="header__main__logo">
-					<a href="/">
+					<Link to="/">
 						<img className="main__logo" src={logo.logo} alt="" />
-					</a>
+					</Link>
 				</div>
 				<nav className="header__main__nav">
 					<ul className="header__main__nav__list">
 						<li className="header__main__nav__list__item">
-							<a href="/request">{words[language]["dealers"]}</a>
+							<Link to="/request">{words[language]["dealers"]}</Link>
 						</li>
 						<li className="header__main__nav__list__item">
-							<a href="/products">{words[language]["products"]}</a>
+							<Link to="/products">{words[language]["products"]}</Link>
 						</li>
 						<li className="header__main__nav__list__item">
-							<a href="/service">{words[language]["warranty"]}</a>
+							<Link to="/service">{words[language]["warranty"]}</Link>
 						</li>
 						<li
 							style={{
@@ -86,7 +86,7 @@ function Header(logo, globe) {
 									id="en"
 									className="language-item"
 								>
-									{/* <a href="">EN</a> */}
+									{/* <Link to="">EN</Link> */}
 									EN
 								</div>
 								<div
@@ -94,7 +94,7 @@ function Header(logo, globe) {
 									id="ru"
 									className="language-item active"
 								>
-									{/* <a href="">RU</a> */}
+									{/* <Link to="">RU</Link> */}
 									RU
 								</div>
 								<div
@@ -102,7 +102,7 @@ function Header(logo, globe) {
 									id="uz"
 									className="language-item"
 								>
-									{/* <a href="">UZ</a> */}
+									{/* <Link to="">UZ</Link> */}
 									UZ
 								</div>
 							</div>
@@ -114,15 +114,15 @@ function Header(logo, globe) {
 			{/* ! menu */}
 			<BurgerMenu />
 			<div className="header__main__user not">
-				<a href="/support" className="btn">
+				<Link to="/support" className="btn">
 					{words[language]["support"]}
-				</a>
-				{/* <a href="" className="btn">
+				</Link>
+				{/* <Link to="" className="btn">
 					<img width={"24px"} src="./images/basket(2).png" alt="" />
-				</a>
-				<a href="" className="btn">
+				</Link>
+				<Link to="" className="btn">
 					<img width={"24px"} src="./images/user.png" alt="" />
-				</a> */}
+				</Link> */}
 			</div>
 		</header>
 	);

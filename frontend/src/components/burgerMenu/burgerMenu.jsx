@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import styles from "./burgerMenu.css";
 import { words } from "../words";
 import { LanguageContext } from "../context/language";
+import {Link} from 'react-router-dom'
 
 export const BurgerMenu = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -68,15 +69,15 @@ export const BurgerMenu = () => {
 					}}
 				>
 					{/* <li className="menu-list-item">
-						<a href="/request">{words[language]["dealers"]}</a>
+						<Link to="/request">{words[language]["dealers"]}</Link>
 					</li>
 					<li className="menu-list-item">
 						{" "}
-						<a href="/products">{words[language]["products"]}</a>
+						<Link to="/products">{words[language]["products"]}</Link>
 					</li>
 					<li className="menu-list-item">
 						{" "}
-						<a href="/service">{words[language]["warranty"]}</a>
+						<Link to="/service">{words[language]["warranty"]}</Link>
 					</li> */}
 				</ul>
 			)}

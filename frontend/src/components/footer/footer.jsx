@@ -2,6 +2,7 @@ import { styles } from "./footer.css";
 import { useContext } from "react";
 import { LanguageContext } from "../context/language";
 import { words, footer } from "../words";
+import {Link} from 'react-router-dom'
 
 export function Footer() {
 	const { language, changeLanguage } = useContext(LanguageContext);
@@ -14,21 +15,21 @@ export function Footer() {
 						{footer[language]["support"]}
 					</span>
 					<li className="footer__list-item">
-						<a href="/support">Поддержка Ssmart</a>
+						<Link to="/support">Поддержка Ssmart</Link>
 					</li>
 					<li className="footer__list-item">
-						<a href="/where-to-buy">Где купить ?</a>
+						<Link to="/where-to-buy">Где купить ?</Link>
 					</li>
 					<li className="footer__list-item">
-						<a href="">Руководство пользователя</a>
-					</li>
-
-					<li className="footer__list-item">
-						<a href="/service">Условия Гарантии</a>
+						<Link to="">Руководство пользователя</Link>
 					</li>
 
 					<li className="footer__list-item">
-						<a href="/request">Дилерам</a>
+						<Link to="/service">Условия Гарантии</Link>
+					</li>
+
+					<li className="footer__list-item">
+						<Link to="/request">Дилерам</Link>
 					</li>
 				</ul>
 				<ul className="footer__list">
@@ -36,13 +37,13 @@ export function Footer() {
 						{footer[language]["about"]}
 					</span>
 					<li className="footer__list-item">
-						<a href="/about-us">Ssmart</a>
+						<Link to="/about-us">Ssmart</Link>
 					</li>
 					<li className="footer__list-item">
-						<a href="/about-us">Производство</a>
+						<Link to="/about-us">Производство</Link>
 					</li>
 					<li className="footer__list-item">
-						<a href="">Политика конфиденциальности</a>
+						<Link to="">Политика конфиденциальности</Link>
 					</li>
 				</ul>
 				<ul className="footer__list">
@@ -50,13 +51,13 @@ export function Footer() {
 						{footer[language]["products"]}
 					</span>
 					<li className="footer__list-item">
-						<a href="products">Все товары</a>
+						<Link to="/products">Все товары</Link>
 					</li>
 					<li className="footer__list-item">
-						<a href="products">Ssmart Web OS</a>
+						<Link to="/products">Ssmart Web OS</Link>
 					</li>
 					<li className="footer__list-item">
-						<a href="products">Ssmart Android</a>
+						<Link to="/products">Ssmart Android</Link>
 					</li>
 				</ul>
 				<ul className="footer__list">
@@ -64,17 +65,17 @@ export function Footer() {
 						{footer[language]["contact"]}
 					</span>
 					<li className="footer__list-item">
-						<a href="mailto: info@ssmart.uz">Эл.почта</a>
+						<Link to="mailto: info@ssmart.uz">Эл.почта</Link>
 					</li>
 					<li className="footer__list-item">
-						<a href="tel:+998712209009">Колл-центр : +998 75 220 00 55</a>
+						<Link to="tel:+998712209009">Колл-центр : +998 75 220 00 55</Link>
 					</li>
 					<li className="footer__list-item">
-						<a href="">Часы работы : с 9:00 до 18:00 Карши</a>
+						<Link to="">Часы работы : с 9:00 до 18:00 Карши</Link>
 					</li>
 
 					<li className="footer__list-item">
-						<a href="/support">Онлайн поддержка</a>
+						<Link to="/support">Онлайн поддержка</Link>
 					</li>
 				</ul>
 			</div>
@@ -91,18 +92,18 @@ export function Footer() {
 			<div className="footer__social">
 				<span className="footer__news-title">Новости Ssmart</span>
 				<div className="footer__news-logos">
-					<a href="">
+					<Link to="">
 						<div className="instagram">
 							<img src="./images/instagram.png" alt="" />
 						</div>
 						instagram
-					</a>
-					<a href="">
+					</Link>
+					<Link to="">
 						<div className="telegram">
 							<img src="./images/telegram.png" alt="" />
 						</div>
 						telegram
-					</a>
+					</Link>
 				</div>
 			</div>
 			<hr

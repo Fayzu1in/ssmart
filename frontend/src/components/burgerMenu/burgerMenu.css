@@ -27,6 +27,10 @@
 	background-color: #bf1d69;
 }
 
+.menu-list-item a:hover {
+	color: #fff;
+}
+
 @media screen and (max-width: 920px) {
 	.menu-container {
 		display: unset;
