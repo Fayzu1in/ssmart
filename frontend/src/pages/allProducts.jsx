@@ -15,7 +15,7 @@ export function AllProducts() {
 	const { language } = useContext(LanguageContext);
 
 	async function getProducts() {
-		const response = await fetch("https://ssmart.uz/api/products/");
+		const response = await fetch("https://ssmartelectronics.com/api/products/");
 		const data = await response.json();
 		setProducts(data);
 	}

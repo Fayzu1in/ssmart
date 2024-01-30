@@ -15,13 +15,13 @@ export function Service() {
 	const { language } = useContext(LanguageContext);
 
 	async function getPartners() {
-		const response = await fetch("https://ssmart.uz/api/partners/");
+		const response = await fetch("https://ssmartelectronics.com/api/partners/");
 		const data = await response.json();
 		setPartners(data);
 	}
 
 	async function getBanner() {
-		const response = await fetch("https://ssmart.uz/api/adverts/");
+		const response = await fetch("https://ssmartelectronics.com/api/adverts/");
 		const data = await response.json();
 		setBanner(data);
 	}

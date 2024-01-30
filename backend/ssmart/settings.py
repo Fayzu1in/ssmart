@@ -17,7 +17,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = ['http://localhost:3000', '193.168.49.170', '127.0.0.1', 'ssmart.uz']
+ALLOWED_HOSTS = ['ssmartelectronics.com', '193.168.49.170', '127.0.0.1', 'ssmart.uz']
 
 # CORS_ALLOWED_ORIGINS = ["https://ssmart.uz/"]
 
