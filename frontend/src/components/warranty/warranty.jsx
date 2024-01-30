@@ -19,7 +19,7 @@ export function WarrantyComponent() {
 	// const [seriesData, setSeriesData] = useState([]);
 	// async function getSeriesData() {
 	// 	try {
-	// 		const response = await fetch("https://ssmart.uz/api/warrantydata/");
+	// 		const response = await fetch("https://ssmartelectronics.com/api/warrantydata/");
 	// 		const data = await response.json();
 	// 		setSeriesData(data);
 	// 	} catch (error) {
@@ -49,7 +49,7 @@ export function WarrantyComponent() {
 
 	const checkSeries = (series) => {
 		axios
-			.get(`https://ssmart.uz/api/warrantydata/?series=${series}`)
+			.get(`https://ssmartelectronics.com/api/warrantydata/?series=${series}`)
 			.then((response) => {
 				// Handle the response from the API
 				let is_found = response.data["found"];
@@ -106,7 +106,7 @@ export function WarrantyComponent() {
 
 	const sendFormData = async (data) => {
 		try {
-			const response = await fetch("https://ssmart.uz/api/warranty/", {
+			const response = await fetch("https://ssmartelectronics.com/api/warranty/", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
